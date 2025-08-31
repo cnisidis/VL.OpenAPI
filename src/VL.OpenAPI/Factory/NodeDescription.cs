@@ -7,7 +7,7 @@ using VL.Core.Diagnostics;
 
 namespace VL.OpenAPI
 {
-    class NodeDescription : IVLNodeDescription, IInfo
+    sealed class NodeDescription : IVLNodeDescription, IInfo
     {
         // Fields
         bool FInitialized;
@@ -17,12 +17,12 @@ namespace VL.OpenAPI
         string FCategory;
 
         private string authParameterName;
-
+        private HttpMethod FMethod;
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
 
-        public NodeDescription(IVLNodeDescriptionFactory factory, string category, string endpoint, string path,   Dictionary<string, SecuritySchemeType> securitySchemes, string apiKey)
+        public NodeDescription(IVLNodeDescriptionFactory factory, string category, string endpoint, string path,   Dictionary<string, SecuritySchemeType> securitySchemes=null, string apiKey=null)
         {
             Factory = factory;
             //Name = Utils.ToPascalCase(operation.Value.OperationId);
@@ -33,6 +33,19 @@ namespace VL.OpenAPI
             FEndpoint = endpoint;
             FSecuritySchemes = securitySchemes;
             FAPIKey = apiKey;
+        }
+
+        public NodeDescription(IVLNodeDescriptionFactory factory, string category, OpenApiOperation operation, HttpMethod method) 
+        {
+            Factory = factory;
+            Name = Utils.ToPascalCase(operation.OperationId);
+            FSummary = operation.Summary;
+            FEndpoint = "";
+            FAPIKey = "";
+            FMethod = method;
+            FCategory = category + method.Method.ToString();
+            
+
         }
 
         void Init()

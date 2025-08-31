@@ -15,26 +15,12 @@
       </p:NodeReference>
       <Patch Id="UowWMtw470dMR4sPfAJfv8">
         <Canvas Id="ABuYfcLlBOYL1qyIYVR3iS" CanvasType="Group">
-          <Node Bounds="463,120,85,19" Id="I397K72GEWUNgN1lZ1SiK4">
-            <p:NodeReference LastCategoryFullName="IO.HTTP" LastDependency="VL.CoreLib.vl">
-              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="HTTPGet" />
-            </p:NodeReference>
-            <Pin Id="IBn9IwbupUSPqqwHhTfAns" Name="Node Context" Kind="InputPin" IsHidden="true" />
-            <Pin Id="KRUw2N0gL1mMY9cNRzyOIQ" Name="URL" Kind="InputPin" />
-            <Pin Id="UwdEALosxsUMwRjj2SvQoZ" Name="Headers" Kind="InputPin" />
-            <Pin Id="QT1DkIE0bkCNh0FN4AaOxk" Name="Username" Kind="InputPin" />
-            <Pin Id="B8ZuzvXAF1GLqdNseF7wQ8" Name="Password" Kind="InputPin" />
-            <Pin Id="ViFuQEzCulBNvlH2kW5M6Q" Name="Refresh" Kind="InputPin" />
-            <Pin Id="QBibyMPttGbLkJWY87j7u5" Name="Result" Kind="OutputPin" />
-            <Pin Id="SF2wFd047qMLUA4sX0PrMq" Name="In Progress" Kind="OutputPin" />
-          </Node>
-          <Pad Id="RtWYa4YXIgcNQRtH5AMOw6" Comment="File Path" Bounds="150,-79,213,17" ShowValueBox="true" isIOBox="true" Value="apis\swagger.yaml">
+          <Pad Id="RtWYa4YXIgcNQRtH5AMOw6" Comment="File Path" Bounds="150,-79,213,17" ShowValueBox="true" isIOBox="true" Value="apis\Resolume.yaml">
             <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Node Bounds="-5,27,594,430" Id="Mcy63WIoK1MOLPRGhVUhYt">
+          <Node Bounds="-842,27,1699,1012" Id="Mcy63WIoK1MOLPRGhVUhYt">
             <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -62,7 +48,7 @@
                 <Pin Id="P0dD15SFLvcNvWSY2nITiz" Name="Input" Kind="StateInputPin" />
                 <Pin Id="IiUogCCaCuMNzNUigk2lg3" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Node Bounds="279,290,71,26" Id="KvCu2I3YCIhPM14TRskbgZ">
+              <Node Bounds="171,280,71,26" Id="KvCu2I3YCIhPM14TRskbgZ">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.ReadResult" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="ReadResult" />
@@ -110,7 +96,7 @@
                 </p:NodeReference>
                 <Pin Id="QGh3jjZCqudQC8EhX0n5qL" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Node Bounds="345,330,85,26" Id="GrlpDVQjhykLu1rm4nRfFB">
+              <Node Bounds="574,330,85,26" Id="GrlpDVQjhykLu1rm4nRfFB">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiDiagnostic" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="OpenApiDiagnostic" />
@@ -120,7 +106,7 @@
                 <Pin Id="MtN5h87nAjQMVRd2VgXQgO" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="MonUvrpU1ZSLo5Ccg3yy5a" Name="Format" Kind="OutputPin" />
               </Node>
-              <Node Bounds="345,370,85,26" Id="QiH7LHr21IjNjUbi48aKnG">
+              <Node Bounds="574,370,85,26" Id="QiH7LHr21IjNjUbi48aKnG">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiDiagnostic" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="OpenApiDiagnostic" />
@@ -180,7 +166,7 @@
                 <Pin Id="TeSJcZ1XMyAOfr5OcB5Kbs" Name="Uri String" Kind="InputPin" />
                 <Pin Id="EG5ZeSDQeqxM8eQtonF91F" Name="Output" Kind="StateOutputPin" />
               </Node>
-              <Node Bounds="132,350,84,26" Id="PxKewWBpk0bOwkz5FpryP3">
+              <Node Bounds="-94,380,84,26" Id="PxKewWBpk0bOwkz5FpryP3">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" />
@@ -190,7 +176,7 @@
                 <Pin Id="I2v5LwSI96uOyDz9ksnQgL" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="QHle2MKuYPTMAW1o5jNdwA" Name="Paths" Kind="OutputPin" />
               </Node>
-              <Node Bounds="7,350,84,26" Id="SXi57kjo60cPGksLW0Txks">
+              <Node Bounds="-218,390,84,26" Id="SXi57kjo60cPGksLW0Txks">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" />
@@ -200,7 +186,7 @@
                 <Pin Id="LEnjAuIbwdeMto0vbovRyb" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="RerIp0jq3cBMuAQm4XNpDE" Name="Info" Kind="OutputPin" />
               </Node>
-              <Node Bounds="63,411,68,26" Id="PSzWjTtgIMNP6jBvdug4K6">
+              <Node Bounds="-139,430,68,26" Id="PSzWjTtgIMNP6jBvdug4K6">
                 <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiInfo" LastDependency="Microsoft.OpenApi.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="OpenApiInfo" />
@@ -210,11 +196,542 @@
                 <Pin Id="NKyLXy97QdHOyeWwu4OAKc" Name="Output" Kind="StateOutputPin" />
                 <Pin Id="OOY0sgzH0e9QZSwy6Ljfmv" Name="Description" Kind="OutputPin" />
               </Node>
+              <Node Bounds="-27,425,872,594" Id="JjAATPjpHWOMwZiuQiztUM">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="GKgMPpFrAPPMyrnaYyx6mz" Name="Break" Kind="OutputPin" />
+                <Patch Id="MaSrptZ5fHyLpKdLr8JV5z" ManuallySortedPins="true">
+                  <Patch Id="Qli81NaiQ9YLGEZaLAyshH" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="TqAGcT6qFFMLUk8dKOmOue" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="SuZbGLRJUS6Pq9kSycgfnE" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="42,500,497,26" Id="I2dBQjL10iROoQVmi4exv2">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiPathItem" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="IOpenApiPathItem" />
+                      <Choice Kind="OperationCallFlag" Name="Operations" />
+                    </p:NodeReference>
+                    <Pin Id="LnmYaxHuyp2PkpnUTKFvhs" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="SDXcHuEJr0ML7PWjMkITSd" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="C8FiR5cGglmLyqtxuVRVhP" Name="Operations" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="42,550,81,26" Id="KKELrPVhFCOL5BEqzqG8QZ">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiPathItem" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="IOpenApiPathItem" />
+                      <Choice Kind="OperationCallFlag" Name="Parameters" />
+                    </p:NodeReference>
+                    <Pin Id="RsUZvYBr47oNxQOBe1Bm9s" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="AUDp8jYtWf1QPsZAVn6wkj" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="MCJ8oj2YgCLOmuC0DbOH51" Name="Parameters" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="118,600,65,19" Id="IbcTrOmljtlP61JzTvFfG7">
+                    <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                    </p:NodeReference>
+                    <Pin Id="I1pYaF30LWZOdrqWRDP6iU" Name="X" Kind="InputPin" />
+                    <Pin Id="IHjGy9s7LWBPBj9nEBZ2W4" Name="Result" Kind="OutputPin" />
+                    <Pin Id="GUohkv7MNEsP0Y81VBrUyz" Name="Not Assigned" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="116,635,304,364" Id="RqjJWx2ExFxPfvvElGNVEw">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                      <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Primitive" />
+                      <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                    </p:NodeReference>
+                    <Pin Id="BefjsiUTpLZNX15XTPxgRQ" Name="Condition" Kind="InputPin" />
+                    <Patch Id="J1pzTiOIw1ROYqdIKW22UJ" ManuallySortedPins="true">
+                      <Patch Id="Ol08SG7EKX7P4iS0U6wVUt" Name="Create" ManuallySortedPins="true" />
+                      <Patch Id="C4VDBXSfobQLtoQJ2rtxPX" Name="Then" ManuallySortedPins="true" />
+                      <Pad Id="UyG6cKxA9fGOEgCd1u5ixd" Comment="" Bounds="332,738,35,36" ShowValueBox="true" isIOBox="true" />
+                      <Node Bounds="168,655,240,324" Id="IUBH3Ev9DOSQSCMuFpamuz">
+                        <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                          <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                          <CategoryReference Kind="Category" Name="Primitive" />
+                          <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                        </p:NodeReference>
+                        <Pin Id="BQOqOC1J9hILvfON2Qmop7" Name="Break" Kind="OutputPin" />
+                        <Patch Id="FGfNpCp00QiPNr6QF6QPKQ" ManuallySortedPins="true">
+                          <Patch Id="HCnIPTBU1XUNrHWrtrJf1R" Name="Create" ManuallySortedPins="true" />
+                          <Patch Id="PXGtxQbnQTyLBoK5DdJRdk" Name="Update" ManuallySortedPins="true" />
+                          <Patch Id="V1GPn6GIqnVOSU0ObmRurH" Name="Dispose" ManuallySortedPins="true" />
+                          <Node Bounds="191,687,65,19" Id="NSBjQmT7HMuNLlduXtYopX">
+                            <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                              <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                            </p:NodeReference>
+                            <Pin Id="Nwei9ecTfEyPpSZ5qgAYqZ" Name="X" Kind="InputPin" />
+                            <Pin Id="Gc3GFmkn4QELfWOZ2HcgLw" Name="Result" Kind="OutputPin" />
+                            <Pin Id="FeRZKQD44EHQBaGlHOdFG1" Name="Not Assigned" Kind="OutputPin" />
+                          </Node>
+                          <Node Bounds="191,734,206,225" Id="Eq2bRxtIjjLN2ec2Nu5ZRA">
+                            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                              <CategoryReference Kind="Category" Name="Primitive" />
+                              <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                            </p:NodeReference>
+                            <Pin Id="Fxskn8KO2YrNOjwEpI2Bmj" Name="Condition" Kind="InputPin" />
+                            <Patch Id="SBUnHht5NxMPVovs9Wi9gR" ManuallySortedPins="true">
+                              <Patch Id="LdYjbjM6mcdPQE6g5EBLl8" Name="Create" ManuallySortedPins="true" />
+                              <Patch Id="Bj7u9DH54DqNhVUtnIrVQn" Name="Then" ManuallySortedPins="true" />
+                              <Node Bounds="203,757,85,26" Id="L2Zor63OwY0LVv592RJR9Q">
+                                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiParameter" LastDependency="Microsoft.OpenApi.dll">
+                                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                  <CategoryReference Kind="AssemblyCategory" Name="IOpenApiParameter" />
+                                  <Choice Kind="OperationCallFlag" Name="Name" />
+                                </p:NodeReference>
+                                <Pin Id="JRM6taCBWT9P3bspdAP0rB" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="GQm8uHD4vKWPnqls5hhF2L" Name="Output" Kind="StateOutputPin" />
+                                <Pin Id="SB0xT3n5ZowNq5dCa3V08X" Name="Name" Kind="OutputPin" />
+                              </Node>
+                              <Node Bounds="203,797,113,26" Id="MtuH9wT8lKwNppZwLaaGiH">
+                                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiParameter" LastDependency="Microsoft.OpenApi.dll">
+                                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                  <CategoryReference Kind="AssemblyCategory" Name="IOpenApiParameter" />
+                                  <Choice Kind="OperationCallFlag" Name="Content" />
+                                </p:NodeReference>
+                                <Pin Id="RjVVdlyrME6MLeP5iDNIGh" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="CdfePHzJAWvN5T4mZ7cM3T" Name="Output" Kind="StateOutputPin" />
+                                <Pin Id="MBS3brTIsskMOmrByjzBAZ" Name="Content" Kind="OutputPin" />
+                              </Node>
+                              <Node Bounds="203,837,132,26" Id="K8SL6CZ384xNqUygD2ejEw">
+                                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiParameter" LastDependency="Microsoft.OpenApi.dll">
+                                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                  <CategoryReference Kind="AssemblyCategory" Name="IOpenApiParameter" />
+                                  <Choice Kind="OperationCallFlag" Name="In" />
+                                </p:NodeReference>
+                                <Pin Id="D7ize5r6OZ6L4FS8tpJxA0" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="TeWLQajrTgnMWBKIGbzFMd" Name="Output" Kind="StateOutputPin" />
+                                <Pin Id="KEw0otp0hjBNtJ4vvQN6M8" Name="In" Kind="OutputPin" />
+                              </Node>
+                              <Node Bounds="330,880,55,26" Id="Q0mlnL366L1OEkH6d6hq2p">
+                                <p:NodeReference LastCategoryFullName="Primitive.ValueType" LastDependency="VL.CoreLib.vl">
+                                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                  <FullNameCategoryReference ID="Primitive.ValueType" />
+                                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                                </p:NodeReference>
+                                <Pin Id="B0b3JZOIHQNLanE55AaEfW" Name="Input" Kind="StateInputPin" />
+                                <Pin Id="LgvmWjBXOrzO3qRzNywmkX" Name="Output" Kind="StateOutputPin" />
+                                <Pin Id="TRqhvMWjXgcP138zmLLk87" Name="Result" Kind="OutputPin" />
+                              </Node>
+                              <Node Bounds="304,920,55,19" Id="GQ8TANScQQHM3f4uf3QaE0">
+                                <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                                </p:NodeReference>
+                                <Pin Id="NaO7VxCZOdNPZnanDW3ak3" Name="Input" Kind="InputPin" />
+                                <Pin Id="D4G0d8r609WQUmSnuD697Y" Name="Result" Kind="OutputPin" />
+                              </Node>
+                            </Patch>
+                            <ControlPoint Id="J5XHcx8BverPLUInlVSmyd" Bounds="285,953" Alignment="Bottom" />
+                            <ControlPoint Id="BsA1sWfbzfhLGjb3NgxNwh" Bounds="285,740" Alignment="Top" />
+                            <ControlPoint Id="DMn27wSwWfOLjhjpamsuur" Bounds="306,953" Alignment="Bottom" />
+                            <ControlPoint Id="BNaUm6XZSEhMEMIOaFnMT6" Bounds="306,740" Alignment="Top" />
+                          </Node>
+                        </Patch>
+                        <ControlPoint Id="Joq2zyujR87PshxcdjKKql" Bounds="205,661" Alignment="Top" />
+                        <ControlPoint Id="Othpw55prk9NKRIb82oV09" Bounds="285,973" Alignment="Bottom" />
+                        <ControlPoint Id="TLZYFOtQVZZNh5o3431HMJ" Bounds="306,973" Alignment="Bottom" />
+                      </Node>
+                    </Patch>
+                    <ControlPoint Id="FL0PU9j7IpDLqUsxwmOMcR" Bounds="285,993" Alignment="Bottom" />
+                    <ControlPoint Id="LQnItabtEIHNBUU2KUYg9f" Bounds="285,641" Alignment="Top" />
+                    <ControlPoint Id="ACVCcachBX8NL1InAXUuGR" Bounds="324,993" Alignment="Bottom" />
+                    <ControlPoint Id="BpjR2yCxM0nOHka3nrRDvw" Bounds="324,641" Alignment="Top" />
+                  </Node>
+                  <Node Bounds="-15,460,62,26" Id="Pmo3bUvwZTTQRnR2CvHZsd">
+                    <p:NodeReference LastCategoryFullName="Collections.Common.KeyValuePair" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="KeyValuePair" />
+                      <Choice Kind="OperationCallFlag" Name="Split" />
+                    </p:NodeReference>
+                    <Pin Id="Qu5xvL0Isf1QcrjBJglhk4" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Iase9ema5iVLObJIDCQgdg" Name="Key" Kind="OutputPin" />
+                    <Pin Id="MjnCgBFjmv4NTZ9JQwRTIV" Name="Value" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="449,594,360,169" Id="M2UiE7fy1F2LJKlel59R0M">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                      <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Primitive" />
+                      <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    </p:NodeReference>
+                    <Pin Id="JDtRMAPRxO9MSjUj0YGUhS" Name="Break" Kind="OutputPin" />
+                    <Patch Id="UxTpuiTlayDOGF6vs1XeOT" ManuallySortedPins="true">
+                      <Patch Id="NqnePDVVor8OBwKROg2MYt" Name="Create" ManuallySortedPins="true" />
+                      <Patch Id="QAsA7Cdf8c4LNnCorTBesX" Name="Update" ManuallySortedPins="true" />
+                      <Patch Id="Kg9zGALJJ8vNCfJn84dJny" Name="Dispose" ManuallySortedPins="true" />
+                      <Node Bounds="534,617,70,26" Id="MXUioASnDFeNFEeqfoeugn">
+                        <p:NodeReference LastCategoryFullName="Collections.Common.KeyValuePair" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="4026531840" Name="KeyValuePair" />
+                          <Choice Kind="OperationCallFlag" Name="Split" />
+                        </p:NodeReference>
+                        <Pin Id="Pd9DjkzQW3sNihzUPPymUs" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="DU4qfEJ7MRJLTph96xeTrs" Name="Key" Kind="OutputPin" />
+                        <Pin Id="Gsksiag6bSJNQC4uw35yni" Name="Value" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="599,717,83,26" Id="Q5LTfd8jSHDM9lBvWpNUjl">
+                        <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiOperation" LastDependency="Microsoft.OpenApi.dll">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="AssemblyCategory" Name="OpenApiOperation" />
+                          <Choice Kind="OperationCallFlag" Name="OperationId" />
+                        </p:NodeReference>
+                        <Pin Id="J322nCRvGIoO5rW4ADk2as" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="UZjguwWhk1HNk1hhkJHQCz" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="HRfvuTjMFb1Oy4NwFokfBa" Name="Operation Id" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="534,718,55,19" Id="K6lLIBGK7gmNELDvt07Qim">
+                        <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="OperationCallFlag" Name="ToString" />
+                        </p:NodeReference>
+                        <Pin Id="Tmmoi4Th60cM7yxUwoEj5L" Name="Input" Kind="InputPin" />
+                        <Pin Id="VomBOcqYEPyLOC5010QeaU" Name="Result" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="618,668,59,26" Id="Sg4rl0Kn7j1LNqLNcmfoeV">
+                        <p:NodeReference LastCategoryFullName="System.Net.Http.HttpMethod" LastDependency="System.Net.Http.dll">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="AssemblyCategory" Name="HttpMethod" />
+                          <Choice Kind="OperationCallFlag" Name="ToString" />
+                        </p:NodeReference>
+                        <Pin Id="GO2VRhO1vfuLWzeBhagPov" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="KnZOsXPaXLJMg2cUDn9AYI" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="NMFTvUOaiMPQZHR7C4EmNQ" Name="Result" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="461,667,78,26" Id="AZbDtaKUj6zLH2pu7TfaQo">
+                        <p:NodeReference LastCategoryFullName="System.Net.Http.HttpMethod" LastDependency="System.Net.Http.dll">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="AssemblyCategory" Name="HttpMethod" />
+                          <Choice Kind="OperationCallFlag" Name="GetHashCode" />
+                        </p:NodeReference>
+                        <Pin Id="OBRxVPIeuZMP4X9zzO7IWL" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="QmM5AuaEJHxM2vVEgwfSwn" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="HKTVocOzH5bLactE2yZkJ3" Name="Result" Kind="OutputPin" />
+                      </Node>
+                      <Node Bounds="714,710,83,26" Id="TcORLyprCELLN1HePIbXkP">
+                        <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiOperation" LastDependency="Microsoft.OpenApi.dll">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <CategoryReference Kind="AssemblyCategory" Name="OpenApiOperation" />
+                          <Choice Kind="OperationCallFlag" Name="RequestBody" />
+                        </p:NodeReference>
+                        <Pin Id="UDhblNgQJe7LGs7j3MsmwV" Name="Input" Kind="StateInputPin" />
+                        <Pin Id="U8muAZJJtzPME25SzQywIy" Name="Output" Kind="StateOutputPin" />
+                        <Pin Id="Bpeb8yGBaVvPXfVjZ4gwws" Name="Request Body" Kind="OutputPin" />
+                      </Node>
+                    </Patch>
+                    <ControlPoint Id="JX81sxCSNAcQKiK28GSjoz" Bounds="536,600" Alignment="Top" />
+                    <ControlPoint Id="KUqNI8wfR50OqKzyHbYtLh" Bounds="679,757" Alignment="Bottom" />
+                    <ControlPoint Id="Tb9HZM4GJvyOUWwYxRTbMA" Bounds="536,757" Alignment="Bottom" />
+                    <ControlPoint Id="NEXpUISIb7tMEyff99D82N" Bounds="786,757" Alignment="Bottom" />
+                  </Node>
+                  <Node Bounds="736,570,81,26" Id="Fpt7GAOd43hMj2p1khEW1t">
+                    <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableDictionary" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="ClassType" Name="MutableDictionary" NeedsToBeDirectParent="true" />
+                      <Choice Kind="OperationCallFlag" Name="Keys" />
+                    </p:NodeReference>
+                    <Pin Id="L3b6to5cgwyQBg4e6n5WDH" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="E9BNGUv959RL0pGxTJ1Gcr" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="LEhRI3qmPILQQNQjmgPE4F" Name="Keys" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="I5SBZeDFta6QB1HR0t3k5G" Bounds="-13,431" Alignment="Top" />
+                <ControlPoint Id="CdyoyVJxcxWMvXK7rXubSg" Bounds="679,1013" Alignment="Bottom" />
+                <ControlPoint Id="GvZZfYyiKPoNxYkG1Gauc9" Bounds="285,1013" Alignment="Bottom" />
+                <ControlPoint Id="QYnEOy4zfTNLzw816Zy66t" Bounds="-12,1013" Alignment="Bottom" />
+                <ControlPoint Id="Usx41HH7SELOzlvMGKjOvV" Bounds="828,1013" Alignment="Bottom" />
+                <ControlPoint Id="Hxsl9WlqosBLeG71Uz0ECf" Bounds="332,1013" Alignment="Bottom" />
+                <ControlPoint Id="JYDTLfyAmVeOtGBrgyDoen" Bounds="786,1013" Alignment="Bottom" />
+              </Node>
+              <Node Bounds="-139,500,61,26" Id="FXd6wnncUBMNz7ZL4izGsM">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiInfo" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiInfo" />
+                  <Choice Kind="OperationCallFlag" Name="Title" />
+                </p:NodeReference>
+                <Pin Id="IBshfYxbEDCP6BBGkpBl09" Name="Input" Kind="StateInputPin" />
+                <Pin Id="G8k5rkq0MWHMgrvMQ0a3yk" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="LdaARRMTh73Nl7ibuf1RYV" Name="Title" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-219,590,84,26" Id="GDKp030ILWvOMqBuLd5aBG">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Tags" />
+                </p:NodeReference>
+                <Pin Id="Ki96KKJixHSOdTn2RTYRIa" Name="Input" Kind="StateInputPin" />
+                <Pin Id="UGDYhO7L5vrLiQy8BGNpEn" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="HZeOFHMC7RzLPXU9kptd9H" Name="Tags" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-182,687,106,100" Id="BuauXCbejnFOUmFCbueP7S">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="DP07ghb44pwQcTaYkE0aWi" Name="Break" Kind="OutputPin" />
+                <Patch Id="JpAxa29e6JYP0q0fBHDejK" ManuallySortedPins="true">
+                  <Patch Id="AuQfp6sT6TZQX95XPI2J9J" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="ILs09Gtj2qOPfYlbpm13m4" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="KNITWF9RQmmNvvIIzeDF1M" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="-170,710,55,19" Id="PHh2KtOES3HL9vbF48iE0L">
+                    <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="ToString" />
+                    </p:NodeReference>
+                    <Pin Id="IcyC1FAfDGnPy9UtmtPQkY" Name="Input" Kind="InputPin" />
+                    <Pin Id="I03j9RjWFMoMqSAkw4VcV2" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="-149,741,61,26" Id="R5oUGJ2Lo2oNeCh4cyUOMh">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiTag" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="OpenApiTag" />
+                      <Choice Kind="OperationCallFlag" Name="Name" />
+                    </p:NodeReference>
+                    <Pin Id="IeDdJwVFDRxLeWzM8K01EF" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="EL0gdM18rOHOR7pnFQXjpd" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="D8R5I2E2qZ8PwanRKJRNKa" Name="Name" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="DOoAlkFNpg7M0oegVbEyCC" Bounds="-147,693" Alignment="Top" />
+                <ControlPoint Id="K0JpqjwfbVjPJSWKXha51Z" Bounds="-159,781" Alignment="Bottom" />
+              </Node>
+              <Node Bounds="-501,530,84,26" Id="SBnNHD61XU3Nddu0TniZ3H">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Components" />
+                </p:NodeReference>
+                <Pin Id="RTKLADm5IrEM1fpet8Tnz3" Name="Input" Kind="StateInputPin" />
+                <Pin Id="MioKAVKyoZpL84xbbLjBCQ" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="O59BLO827cIMsOLRKzKbHa" Name="Components" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-356,710,92,26" Id="IRGGrbMjdwsMC47xkEByAh">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiComponents" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiComponents" />
+                  <Choice Kind="OperationCallFlag" Name="PathItems" />
+                </p:NodeReference>
+                <Pin Id="Qo8BpiiUhb5NBsm9KFwLMG" Name="Input" Kind="StateInputPin" />
+                <Pin Id="QyksaCQla5AOiYfeKBJ9XO" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="R8OhLRAUppuNCYnECY04yw" Name="Path Items" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-347,630,55,19" Id="IY9ODqQUwwMPa53kBKfM7b">
+                <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                </p:NodeReference>
+                <Pin Id="BYX8cbFPuU5LdBI2R53LjB" Name="Input" Kind="InputPin" />
+                <Pin Id="UbrnBSYCdHyPsYhUunA0hP" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-498,741,80,80" Id="Rq23sxvWuchM9FQTbeFbC6">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" NeedsToBeDirectParent="true">
+                    <p:OuterCategoryReference Kind="Category" NeedsToBeDirectParent="true" />
+                  </CategoryReference>
+                  <Choice Kind="ApplicationFlag" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="ICsRL7Gkl4BPZU0co8xpPr" Name="Break" Kind="OutputPin" />
+                <Patch Id="Q9DnkSW5xwGOTQblnyo1Yy" ManuallySortedPins="true">
+                  <Patch Id="VdYKbLOnJQ5LE97W2zHChQ" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="JMhrZ10MWtCPLlAEw3AZBQ" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="DlHuEpH5kdwNyzo2ulqOPU" Name="Dispose" ManuallySortedPins="true" />
+                </Patch>
+              </Node>
+              <Node Bounds="-673,710,92,26" Id="PdGZXIKZtjDLOCSQ33k0UP">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiComponents" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiComponents" />
+                  <Choice Kind="OperationCallFlag" Name="Headers" />
+                </p:NodeReference>
+                <Pin Id="FiQ06TeHhhFPwZbGvcfs1u" Name="Input" Kind="StateInputPin" />
+                <Pin Id="FEge1gqrYvDPYqHlanSAYo" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="IRPD21jyVpAQKX9wIEkaFX" Name="Headers" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-830,670,92,26" Id="De4HIuBMdvGLXPSoz0Chrd">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiComponents" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiComponents" />
+                  <Choice Kind="OperationCallFlag" Name="Schemas" />
+                </p:NodeReference>
+                <Pin Id="QfYGM4xDjsiL9no3iFGuHM" Name="Input" Kind="StateInputPin" />
+                <Pin Id="SMDN0SEVRdoNk1UBxGIsCC" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="P1Or2jqA7RAO8dcqZLy7Nc" Name="Schemas" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-788,737,305,190" Id="QLUWf7bZ6ZJPHuY5cJJCQC">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                </p:NodeReference>
+                <Pin Id="JyrFodnrCNhQEosKHk34rV" Name="Break" Kind="OutputPin" />
+                <Patch Id="V2Jt49fmtUcMBd9xx18Dqs" ManuallySortedPins="true">
+                  <Patch Id="MRxDExUWtGqLe6eXLY3T2O" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="BpFIxuPI5A5Lhf6Ancq1O5" Name="Update" ManuallySortedPins="true" />
+                  <Patch Id="GFzexFW4R9BPS38rfIpmyt" Name="Dispose" ManuallySortedPins="true" />
+                  <Node Bounds="-776,850,55,19" Id="IcNIEdKvEG3M9O5yJkBdHl">
+                    <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="ToString" />
+                    </p:NodeReference>
+                    <Pin Id="ArYL2lhWysXPTQGJuEgMAi" Name="Input" Kind="InputPin" />
+                    <Pin Id="K5WfTI8UWnaLX03je27lTp" Name="Result" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="-723,760,62,26" Id="SIMafXnIlO7N5h3e4J2utD">
+                    <p:NodeReference LastCategoryFullName="Collections.Common.KeyValuePair" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="4026531840" Name="KeyValuePair" />
+                      <Choice Kind="OperationCallFlag" Name="Split" />
+                    </p:NodeReference>
+                    <Pin Id="QeIaW6uB3uwLkCHnjwllAK" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="Saj799D2aqVQSTjxKtQtqi" Name="Key" Kind="OutputPin" />
+                    <Pin Id="JWGZG7aWe2vL2d7SPERC87" Name="Value" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="-572,870,77,26" Id="G7vuyt8jEbgMoRxzwHUn4D">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiSchema" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="IOpenApiSchema" />
+                      <Choice Kind="OperationCallFlag" Name="Items" />
+                    </p:NodeReference>
+                    <Pin Id="AABI5O4PeRnQWEiiKoIOlZ" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="OjVOK5DkcJ3OQYudUCh1cp" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="DlPfYP4ER1mMr4l41NKbf3" Name="Items" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="-578,870,77,26" Id="C72Sh6jOb6LL86o8Mu6qUO">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiSchema" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="IOpenApiSchema" />
+                      <Choice Kind="OperationCallFlag" Name="Definitions" />
+                    </p:NodeReference>
+                    <Pin Id="EWWETkZgqT4L01ETDMubhM" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="OEakJrkCeXyPNGDEE1zHXp" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="EL4klIrScWjMpfvtUttDVA" Name="Definitions" Kind="OutputPin" />
+                  </Node>
+                  <Node Bounds="-718,860,77,26" Id="UllzaUG1mnMLVNj5Rud18P">
+                    <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.IOpenApiSchema" LastDependency="Microsoft.OpenApi.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <CategoryReference Kind="AssemblyCategory" Name="IOpenApiSchema" />
+                      <Choice Kind="OperationCallFlag" Name="Id" />
+                    </p:NodeReference>
+                    <Pin Id="TkcdLbXjNkqOaV4weoblRv" Name="Input" Kind="StateInputPin" />
+                    <Pin Id="U5hN9nyc6ReOaHCY1LcIUC" Name="Output" Kind="StateOutputPin" />
+                    <Pin Id="IQQFT57x0ZfQD4gRVIzrw5" Name="Id" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="JnBCnMfiveuLuD5KXeojQ1" Bounds="-741,743" Alignment="Top" />
+                <ControlPoint Id="MY4FW7Y3GwoMVS7IQe52YF" Bounds="-774,921" Alignment="Bottom" />
+                <ControlPoint Id="URJMhGZRgViM0KGxrfohbY" Bounds="-570,921" Alignment="Bottom" />
+                <ControlPoint Id="S4Yhej85HvzNTnCh77NbD6" Bounds="-635,921" Alignment="Bottom" />
+                <ControlPoint Id="RzaOkn6paJ4McL8SvnSbJh" Bounds="-670,921" Alignment="Bottom" />
+                <ControlPoint Id="CMSj7pZi9fwPmc1g5eur4Q" Bounds="-670,743" Alignment="Top" />
+                <ControlPoint Id="S23VKGTYMOJPqqluC9Ufwt" Bounds="-653,921" Alignment="Bottom" />
+              </Node>
+              <Node Bounds="-334,790,65,19" Id="Loz4ri3oV6wNVx6grhK7uD">
+                <p:NodeReference LastCategoryFullName="Primitive.Object" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="IsAssigned" />
+                </p:NodeReference>
+                <Pin Id="ODLsxxIyfkDQDvUqPhE0SE" Name="X" Kind="InputPin" />
+                <Pin Id="Em0L9uQWAgwO03KT33ecC8" Name="Result" Kind="OutputPin" />
+                <Pin Id="FO1Gw4pudTeOdxpoKkTFDf" Name="Not Assigned" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-334,820,144,154" Id="C7tdq9OihnlOmU2qj3DlD5">
+                <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <CategoryReference Kind="Category" Name="Primitive" />
+                  <Choice Kind="ApplicationStatefulRegion" Name="If" />
+                </p:NodeReference>
+                <Pin Id="RmKlH3DSF6qLTSELUUWMVQ" Name="Condition" Kind="InputPin" />
+                <Patch Id="JNWKP82wKxcL91wAjFTmoc" ManuallySortedPins="true">
+                  <Patch Id="RKovl7xfsZYNpyHG86WsCd" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="REmaa3LHcsYQBerOJ6t0bY" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="-281,840,79,114" Id="Po5Z7hV7tUeOi3Ro6ab8Qz">
+                    <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+                      <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                      <CategoryReference Kind="Category" Name="Primitive" />
+                      <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+                    </p:NodeReference>
+                    <Pin Id="V4UTaolx8ndNABJAdbz1NK" Name="Break" Kind="OutputPin" />
+                    <Patch Id="UgTuY6XjcoIOqwReg3R2Aj" ManuallySortedPins="true">
+                      <Patch Id="MlRFS8X03x3PiyJ7TqwXFs" Name="Create" ManuallySortedPins="true" />
+                      <Patch Id="Gnv9W3KnRGGPapqUyIJ9yC" Name="Update" ManuallySortedPins="true" />
+                      <Patch Id="Q6FSAmj36GxMeCEdhMgam9" Name="Dispose" ManuallySortedPins="true" />
+                      <Node Bounds="-269,915,55,19" Id="FjcCvITCPuJMDxs8ol7Itk">
+                        <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                          <Choice Kind="OperationCallFlag" Name="ToString" />
+                        </p:NodeReference>
+                        <Pin Id="TxuAMa20Xi2QCXNIpUgnCD" Name="Input" Kind="InputPin" />
+                        <Pin Id="RrH2BudqANjMGoUppeGg1F" Name="Result" Kind="OutputPin" />
+                      </Node>
+                    </Patch>
+                    <ControlPoint Id="IVgajgZXOe6NausVw7A4VU" Bounds="-267,846" Alignment="Top" />
+                    <ControlPoint Id="C9S5LQ0BbedQOLxNtlrP4Y" Bounds="-266,948" Alignment="Bottom" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="LqLpOMwPoXHN8HyvQkdqNE" Bounds="-265,968" Alignment="Bottom" />
+                <ControlPoint Id="BujbO0Bkrp7NVs2bdVam1C" Bounds="-265,826" Alignment="Top" />
+              </Node>
+              <Node Bounds="-544,610,92,26" Id="JkrNRBVjNVoPVED2pqnxda">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiComponents" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiComponents" />
+                  <Choice Kind="OperationCallFlag" Name="Parameters" />
+                </p:NodeReference>
+                <Pin Id="OYETS0h4GFoMurbusMdnv1" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Hx56zOY6j52OxRqUDmixql" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="Gv2xoGnFv3qMl2WHCogDly" Name="Parameters" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-772,570,92,26" Id="Idpc8FzvJtsOflrCezYk4j">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiComponents" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiComponents" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="SecuritySchemes" />
+                </p:NodeReference>
+                <Pin Id="FJOTn3RQBy8O8t17hTbFSI" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Rq0CRORIKkbP4fMyzGSoSv" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="GKu43Fdl1K6OLgp2006EB6" Name="Security Schemes" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-631,621,81,26" Id="CHYYkB47qVCM8QFH2EAg6X">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableDictionary" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ClassType" Name="MutableDictionary" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="Values" />
+                </p:NodeReference>
+                <Pin Id="JsfvDh9I84aL4M91A97xJZ" Name="Input" Kind="StateInputPin" />
+                <Pin Id="RvN1udRVdMfPGuRQW5VmOv" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="FHZVLiPNR7tMvHpvsdkeNc" Name="Values" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="-744,610,83,26" Id="U0xMKvN07nZLAfIe3fu5v2">
+                <p:NodeReference LastCategoryFullName="Collections.Interfaces.IMutableDictionary" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="MutableInterfaceType" Name="IMutableDictionary" />
+                  <Choice Kind="OperationCallFlag" Name="Values" />
+                </p:NodeReference>
+                <Pin Id="QHVF7EKwk5OM5klCnXwSez" Name="Input" Kind="StateInputPin" />
+                <Pin Id="S36aMpLUYMWOA2yLhCBmiQ" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="D4cgKvNIOHuPIM1DB9rY7H" Name="Values" Kind="OutputPin" />
+              </Node>
             </Patch>
-            <ControlPoint Id="GDeHFD6MwckLmZXBtqaJHu" Bounds="490,451" Alignment="Bottom" />
-            <ControlPoint Id="G6tKx0tHgrEODyEku36a2q" Bounds="417,451" Alignment="Bottom" />
-            <ControlPoint Id="UMg0MjpSLKXNuuWXQbXrzi" Bounds="295,451" Alignment="Bottom" />
-            <ControlPoint Id="IADot1XNmYxNw15CMoc9zO" Bounds="119,451" Alignment="Bottom" />
+            <ControlPoint Id="SOWQBbrKlBvMa37gYGFwTh" Bounds="-170,1033" Alignment="Bottom" />
+            <ControlPoint Id="HrFjj4YXIZRLJytEE8YRs7" Bounds="679,1033" Alignment="Bottom" />
+            <ControlPoint Id="OTbaEH4BygvQVlP197FqN5" Bounds="285,1033" Alignment="Bottom" />
+            <ControlPoint Id="R69RsD2gEbqLvkH6DmViCj" Bounds="-11,1033" Alignment="Bottom" />
+            <ControlPoint Id="VO3czz8VG4hPJrqjNBBwOF" Bounds="834,1033" Alignment="Bottom" />
+            <ControlPoint Id="SLSGxLyxoArOnWnW8D6JoM" Bounds="-345,1033" Alignment="Bottom" />
+            <ControlPoint Id="KFXkkJNuH9rOjMD0VZeZsK" Bounds="-584,1033" Alignment="Bottom" />
+            <ControlPoint Id="IGGDraLYfQAQHyIGqjEChF" Bounds="-740,1033" Alignment="Bottom" />
+            <ControlPoint Id="SUUeTQu4ek9M9WrSRp1Aij" Bounds="-266,1033" Alignment="Bottom" />
+            <ControlPoint Id="TrbOWuyQXOoNlSAeAkDqcp" Bounds="-553,1033" Alignment="Bottom" />
+            <ControlPoint Id="EVq03MKuSz9MTihNsxNawn" Bounds="332,1033" Alignment="Bottom" />
+            <ControlPoint Id="IhWiioQkl7MMfahA8ZRE5b" Bounds="786,1033" Alignment="Bottom" />
+            <ControlPoint Id="ROZ0xiq710YO1Q2DSBDiDh" Bounds="-628,1033" Alignment="Bottom" />
+            <ControlPoint Id="FCHXSP02pguPgFkI8arzzk" Bounds="-669,1033" Alignment="Bottom" />
+            <ControlPoint Id="E6tKX62vQ0LMC3frL9hqIw" Bounds="-415,1033" Alignment="Bottom" />
           </Node>
           <Pad Id="KD7DPmLXhqnPRK25fQXLot" Comment="Force" Bounds="12,-59,35,35" ShowValueBox="true" isIOBox="true" Value="false">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
@@ -224,39 +741,1418 @@
               <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="EE2ChPIFpYfNHDKqJ4iogK" Comment="" Bounds="650,430,127,15" ShowValueBox="true" isIOBox="true" />
-          <Node Bounds="474,448,93,86" Id="Nu19YRa1MsbLnicsnJy21k">
-            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
-              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Primitive" />
-              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
-            </p:NodeReference>
-            <Pin Id="RqsnhzccBAALgnPxMzagoW" Name="Break" Kind="OutputPin" />
-            <Patch Id="RUbEw4D5lJbNz6FIQx4eRe" ManuallySortedPins="true">
-              <Patch Id="L2yydgOM38kOr7woTxMVOz" Name="Create" ManuallySortedPins="true" />
-              <Patch Id="IWFH7FyF1gdNRjivxhXv7O" Name="Update" ManuallySortedPins="true" />
-              <Patch Id="BDl9bUzl4TGLgnTc49URKR" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="488,471,65,26" Id="VuebFn0C5BVQMCx1u99oRF">
-                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiError" LastDependency="Microsoft.OpenApi.dll">
-                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiError" />
-                  <Choice Kind="OperationCallFlag" Name="Message" />
-                </p:NodeReference>
-                <Pin Id="Q6YtRrDNYHOPisPZ3csqcq" Name="Input" Kind="StateInputPin" />
-                <Pin Id="VmvS3lG5gtjMyaIJFsn9U0" Name="Output" Kind="StateOutputPin" />
-                <Pin Id="C0gY59B0vnOO4hOfRvWpnN" Name="Message" Kind="OutputPin" />
-              </Node>
-            </Patch>
-            <ControlPoint Id="NmF3LilT8O5NVtj5M3R6Yd" Bounds="490,454" Alignment="Top" />
-            <ControlPoint Id="AJNKFXRKW00L2x3aYUt0Bt" Bounds="550,528" Alignment="Bottom" />
-          </Node>
-          <Pad Id="NQm0Tm5ZRJNLxz8yZWrID7" Comment="" Bounds="550,570,733,45" ShowValueBox="true" isIOBox="true">
+          <Pad Id="AhvR1KKtEe2QRRFMU5yOxX" Comment="" Bounds="889,1050,579,223" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:showentryindex p:Type="Boolean">true</p:showentryindex>
+            </p:ValueBoxSettings>
             <p:Value>
-              <Item>Please provide the correct format, 'o' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.</Item>
+              <Item>
+                <Item>get_product</Item>
+              </Item>
+              <Item>
+                <Item>get_effects</Item>
+              </Item>
+              <Item>
+                <Item>get_sources</Item>
+              </Item>
+              <Item>
+                <Item>get_parameter_by_id</Item>
+                <Item>set_parameter_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_parameter_by_id</Item>
+              </Item>
+              <Item>
+                <Item>list_composition</Item>
+                <Item>replace_composition</Item>
+              </Item>
+              <Item>
+                <Item>composition_action</Item>
+              </Item>
+              <Item>
+                <Item>composition_disconnect_all</Item>
+              </Item>
+              <Item>
+                <Item>effect_set_display_name_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_composition</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_composition_offset</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_composition</Item>
+              </Item>
+              <Item>
+                <Item>add_composition_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_composition_effect</Item>
+              </Item>
+              <Item>
+                <Item>reset_composition_param</Item>
+              </Item>
+              <Item>
+                <Item>get_column</Item>
+                <Item>replace_column</Item>
+                <Item>delete_column</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_column</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_column</Item>
+              </Item>
+              <Item>
+                <Item>reset_column_param</Item>
+              </Item>
+              <Item>
+                <Item>column_connect</Item>
+              </Item>
+              <Item>
+                <Item>column_select</Item>
+              </Item>
+              <Item>
+                <Item>get_column_by_id</Item>
+                <Item>replace_column_by_id</Item>
+                <Item>remove_column_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_column_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_column_param_by_id</Item>
+              </Item>
+              <Item>
+                <Item>column_connect_by_id</Item>
+              </Item>
+              <Item>
+                <Item>column_select_by_id</Item>
+              </Item>
+              <Item>
+                <Item>get_layer</Item>
+                <Item>replace_layer</Item>
+                <Item>delete_layer</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_layer</Item>
+              </Item>
+              <Item>
+                <Item>video_effect_set_display_name_layer</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_offset</Item>
+              </Item>
+              <Item>
+                <Item>add_layer_effect</Item>
+              </Item>
+              <Item>
+                <Item>layer_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_layer_effect</Item>
+              </Item>
+              <Item>
+                <Item>list_selected_layer</Item>
+                <Item>replace_selected_layer</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_selected_layer</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_selected_layer</Item>
+              </Item>
+              <Item>
+                <Item>selected_layer_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_selected_layer_effect</Item>
+              </Item>
+              <Item>
+                <Item>reset_layer_param</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_layer</Item>
+              </Item>
+              <Item>
+                <Item>reset_selected_layer_param</Item>
+              </Item>
+              <Item>
+                <Item>layer_select</Item>
+              </Item>
+              <Item>
+                <Item>layer_clear</Item>
+              </Item>
+              <Item>
+                <Item>selected_layer_clear</Item>
+              </Item>
+              <Item>
+                <Item>layer_clear_clips</Item>
+              </Item>
+              <Item>
+                <Item>selected_layer_clear_clips</Item>
+              </Item>
+              <Item>
+                <Item>get_layer_by_id</Item>
+                <Item>replace_layer_by_id</Item>
+                <Item>delete_layer_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_layer_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_offset_by_id</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_layer_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layer_add_effect_by_id_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_layer_effect_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_layer_param_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layer_select_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layer_clear_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layer_clear_clips_by_id</Item>
+              </Item>
+              <Item>
+                <Item>get_layergroup</Item>
+                <Item>replace_layergroup</Item>
+                <Item>delete_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>layer_group_clear</Item>
+              </Item>
+              <Item>
+                <Item>selected_layer_group_clear</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_move_layer_to_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_layer_to_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_layergroup</Item>
+              </Item>
+              <Item>
+                <Item>video_effect_set_display_name_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_group_offset</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_layergroup</Item>
+              </Item>
+              <Item>
+                <Item>layergroup_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_layer_group_effect</Item>
+              </Item>
+              <Item>
+                <Item>layer_group_column_connect</Item>
+              </Item>
+              <Item>
+                <Item>layer_group_column_select</Item>
+              </Item>
+              <Item>
+                <Item>list_selected_layergroup</Item>
+                <Item>replace_selected_layergroup</Item>
+                <Item>delete_selected_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_selected_layer_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_move_layer_to_selected_group</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_layer_to_selected_group</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_selected_layergroup</Item>
+              </Item>
+              <Item>
+                <Item>selected_layergroup_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_selected_layer_group_effect</Item>
+              </Item>
+              <Item>
+                <Item>reset_layer_group_param</Item>
+              </Item>
+              <Item>
+                <Item>reset_selected_layer_group_param</Item>
+              </Item>
+              <Item>
+                <Item>layergroup_select</Item>
+              </Item>
+              <Item>
+                <Item>get_layergroup_column</Item>
+                <Item>replace_layergroup_column</Item>
+              </Item>
+              <Item>
+                <Item>get_layergroup_by_id</Item>
+                <Item>replace_layergroup_by_id</Item>
+                <Item>delete_layergroup_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layer_group_clear_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_layer_group_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_move_layer_to_group_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_layer_to_group_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_group_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_layer_group_offset_by_id</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_layergroup_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layergroup_add_effect_by_id_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_layer_group_effect_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_layer_group_param_by_id</Item>
+              </Item>
+              <Item>
+                <Item>layergroup_select_by_id</Item>
+              </Item>
+              <Item>
+                <Item>get_deck</Item>
+                <Item>replace_deck</Item>
+                <Item>delete_deck</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_deck</Item>
+              </Item>
+              <Item>
+                <Item>composition_add_deck</Item>
+              </Item>
+              <Item>
+                <Item>reset_deck_param</Item>
+              </Item>
+              <Item>
+                <Item>deck_select</Item>
+              </Item>
+              <Item>
+                <Item>get_deck_by_id</Item>
+                <Item>replace_deck_by_id</Item>
+                <Item>delete_deck_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_duplicate_deck_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_close_deck_by_id</Item>
+              </Item>
+              <Item>
+                <Item>composition_open_deck_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_deck_param_by_id</Item>
+              </Item>
+              <Item>
+                <Item>deck_select_by_id</Item>
+              </Item>
+              <Item>
+                <Item>get_clip_by_position</Item>
+                <Item>replace_clip_by_position</Item>
+              </Item>
+              <Item>
+                <Item>video_effect_set_display_name_clip</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_clip</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_clip_offset</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_clip</Item>
+              </Item>
+              <Item>
+                <Item>clip_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_clip_effect</Item>
+              </Item>
+              <Item>
+                <Item>list_selected_clip</Item>
+                <Item>replace_selected_clip</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_selected_clip</Item>
+              </Item>
+              <Item>
+                <Item>selected_clip_add_effect_offset</Item>
+              </Item>
+              <Item>
+                <Item>delete_selected_clip_effect</Item>
+              </Item>
+              <Item>
+                <Item>reset_clip_param</Item>
+              </Item>
+              <Item>
+                <Item>reset_selected_clip_param</Item>
+              </Item>
+              <Item>
+                <Item>clip_select</Item>
+              </Item>
+              <Item>
+                <Item>clip_connect</Item>
+              </Item>
+              <Item>
+                <Item>selected_clip_connect</Item>
+              </Item>
+              <Item>
+                <Item>clip_open</Item>
+              </Item>
+              <Item>
+                <Item>clip_openfile</Item>
+              </Item>
+              <Item>
+                <Item>selected_clip_open</Item>
+              </Item>
+              <Item>
+                <Item>selected_clip_openfile</Item>
+              </Item>
+              <Item>
+                <Item>clip_clear</Item>
+              </Item>
+              <Item>
+                <Item>selected_clip_clear</Item>
+              </Item>
+              <Item>
+                <Item>get_clip_by_id</Item>
+                <Item>replace_clip_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_clip_by_id</Item>
+              </Item>
+              <Item>
+                <Item>move_effect_clip_offset_by_id</Item>
+              </Item>
+              <Item>
+                <Item>add_effect_clip_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_add_effect_offset_by_id</Item>
+              </Item>
+              <Item>
+                <Item>delete_clip_effect_by_id</Item>
+              </Item>
+              <Item>
+                <Item>reset_clip_param_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_select_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_connect_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_open_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_openfile_by_id</Item>
+              </Item>
+              <Item>
+                <Item>clip_clear_by_id</Item>
+              </Item>
+              <Item>
+                <Item>list_clip_thumbnail_by_position</Item>
+                <Item>set_clip_thumbnail_by_position</Item>
+                <Item>revert_clip_thumbnail_by_position</Item>
+              </Item>
+              <Item>
+                <Item>list_selected_clip_thumbnail</Item>
+                <Item>set_selected_clip_thumbnail</Item>
+                <Item>revert_selected_clip_thumbnail</Item>
+              </Item>
+              <Item>
+                <Item>get_clip_thumbnail_by_position_and_timestamp</Item>
+              </Item>
+              <Item>
+                <Item>get_last_clip_thumbnail_by_timestamp</Item>
+              </Item>
+              <Item>
+                <Item>list_clip_thumbnail_by_id</Item>
+                <Item>set_clip_thumbnail_by_id</Item>
+                <Item>revert_clip_thumbnail_by_id</Item>
+              </Item>
+              <Item>
+                <Item>get_clip_thumbnail_by_id_and_timestamp</Item>
+              </Item>
+              <Item>
+                <Item>list_dummy_thumbnail</Item>
+              </Item>
+              <Item>
+                <Item>get_effect_by_id</Item>
+                <Item>replace_effect_by_id</Item>
+              </Item>
             </p:Value>
           </Pad>
-          <Pad Id="Dh4pmxSpqHvO4q5FnN6YlN" Comment="" Bounds="200,470,190,132" ShowValueBox="true" isIOBox="true" />
-          <Pad Id="DeeVO6RcoLONaWxazuPkhL" Comment="" Bounds="101,500,370,113" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Qrbrg1sZtbyQHFtRBYW1jq" Comment="" Bounds="254,1230,179,172" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SgEScYOHHOnPM1ozp0GGJD" Comment="" Bounds="31,1061,316,175" ShowValueBox="true" isIOBox="true">
+            <p:ValueBoxSettings>
+              <p:showentryindex p:Type="Boolean">true</p:showentryindex>
+            </p:ValueBoxSettings>
+            <p:Value>
+              <Item>/product</Item>
+              <Item>/effects</Item>
+              <Item>/sources</Item>
+              <Item>/parameter/by-id/{parameter-id}</Item>
+              <Item>/parameter/by-id/{parameter-id}/reset</Item>
+              <Item>/composition</Item>
+              <Item>/composition/action</Item>
+              <Item>/composition/disconnect-all</Item>
+              <Item>/composition/effects/by-id/{effect-id}/set-display-name</Item>
+              <Item>/composition/effects/video/move</Item>
+              <Item>/composition/effects/video/move/{offset}</Item>
+              <Item>/composition/effects/video/add</Item>
+              <Item>/composition/effects/video/add/{offset}</Item>
+              <Item>/composition/effects/video/{offset}</Item>
+              <Item>/composition/{parameter}/reset</Item>
+              <Item>/composition/columns/{column-index}</Item>
+              <Item>/composition/columns/{column-index}/duplicate</Item>
+              <Item>/composition/columns/add</Item>
+              <Item>/composition/columns/{column-index}/{parameter}/reset</Item>
+              <Item>/composition/columns/{column-index}/connect</Item>
+              <Item>/composition/columns/{column-index}/select</Item>
+              <Item>/composition/columns/by-id/{column-id}</Item>
+              <Item>/composition/columns/by-id/{column-id}/duplicate</Item>
+              <Item>/composition/columns/by-id/{column-id}/{parameter}/reset</Item>
+              <Item>/composition/columns/by-id/{column-id}/connect</Item>
+              <Item>/composition/columns/by-id/{column-id}/select</Item>
+              <Item>/composition/layers/{layer-index}</Item>
+              <Item>/composition/layers/{layer-index}/duplicate</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/{effect-index}/set-display-name</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/move</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/move/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/add</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/add/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/effects/video/{offset}</Item>
+              <Item>/composition/layers/selected</Item>
+              <Item>/composition/layers/selected/duplicate</Item>
+              <Item>/composition/layers/selected/effects/video/add</Item>
+              <Item>/composition/layers/selected/effects/video/add/{offset}</Item>
+              <Item>/composition/layers/selected/effects/video/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/{parameter}/reset</Item>
+              <Item>/composition/layers/add</Item>
+              <Item>/composition/layers/selected/{parameter}/reset</Item>
+              <Item>/composition/layers/{layer-index}/select</Item>
+              <Item>/composition/layers/{layer-index}/clear</Item>
+              <Item>/composition/layers/selected/clear</Item>
+              <Item>/composition/layers/{layer-index}/clearclips</Item>
+              <Item>/composition/layers/selected/clearclips</Item>
+              <Item>/composition/layers/by-id/{layer-id}</Item>
+              <Item>/composition/layers/by-id/{layer-id}/duplicate</Item>
+              <Item>/composition/layers/by-id/{layer-id}/effects/video/move</Item>
+              <Item>/composition/layers/by-id/{layer-id}/effects/video/move/{offset}</Item>
+              <Item>/composition/layers/by-id/{layer-id}/effects/video/add</Item>
+              <Item>/composition/layers/by-id/{layer-id}/effects/video/add/{offset}</Item>
+              <Item>/composition/layers/by-id/{layer-id}/effects/video/{offset}</Item>
+              <Item>/composition/layers/by-id/{layer-id}/{parameter}/reset</Item>
+              <Item>/composition/layers/by-id/{layer-id}/select</Item>
+              <Item>/composition/layers/by-id/{layer-id}/clear</Item>
+              <Item>/composition/layers/by-id/{layer-id}/clearclips</Item>
+              <Item>/composition/layergroups/{layergroup-index}</Item>
+              <Item>/composition/layergroups/{layergroup-index}/clear</Item>
+              <Item>/composition/layergroups/selected/clear</Item>
+              <Item>/composition/layergroups/{layergroup-index}/duplicate</Item>
+              <Item>/composition/layergroups/{layergroup-index}/move-layer</Item>
+              <Item>/composition/layergroups/{layergroup-index}/add-layer</Item>
+              <Item>/composition/layergroups/add</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/{effect-index}/set-display-name</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/move</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/move/{offset}</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/add</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/add/{offset}</Item>
+              <Item>/composition/layergroups/{layergroup-index}/effects/video/{offset}</Item>
+              <Item>/composition/layergroups/{layergroup-index}/columns/{column-index}/connect</Item>
+              <Item>/composition/layergroups/{layergroup-index}/columns/{column-index}/select</Item>
+              <Item>/composition/layergroups/selected</Item>
+              <Item>/composition/layergroups/selected/duplicate</Item>
+              <Item>/composition/layergroups/selected/move-layer</Item>
+              <Item>/composition/layergroups/selected/add-layer</Item>
+              <Item>/composition/layergroups/selected/effects/video/add</Item>
+              <Item>/composition/layergroups/selected/effects/video/add/{offset}</Item>
+              <Item>/composition/layergroups/selected/effects/video/{offset}</Item>
+              <Item>/composition/layergroups/{layergroup-index}/{parameter}/reset</Item>
+              <Item>/composition/layergroups/selected/{parameter}/reset</Item>
+              <Item>/composition/layergroups/{layergroup-index}/select</Item>
+              <Item>/composition/layergroups/{layergroup-index}/columns/{column-index}</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/clear</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/duplicate</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/move-layer</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/add-layer</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/move</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/move/{offset}</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/add</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/add/{offset}</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/{offset}</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/{parameter}/reset</Item>
+              <Item>/composition/layergroups/by-id/{layergroup-id}/select</Item>
+              <Item>/composition/decks/{deck-index}</Item>
+              <Item>/composition/decks/{deck-index}/duplicate</Item>
+              <Item>/composition/decks/add</Item>
+              <Item>/composition/decks/{deck-index}/{parameter}/reset</Item>
+              <Item>/composition/decks/{deck-index}/select</Item>
+              <Item>/composition/decks/by-id/{deck-id}</Item>
+              <Item>/composition/decks/by-id/{deck-id}/duplicate</Item>
+              <Item>/composition/decks/by-id/{deck-id}/close</Item>
+              <Item>/composition/decks/by-id/{deck-id}/open</Item>
+              <Item>/composition/decks/by-id/{deck-id}/{parameter}/reset</Item>
+              <Item>/composition/decks/by-id/{deck-id}/select</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/{effect-index}/set-display-name</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/move</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/move/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/add</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/add/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/{offset}</Item>
+              <Item>/composition/clips/selected</Item>
+              <Item>/composition/clips/selected/effects/video/add</Item>
+              <Item>/composition/clips/selected/effects/video/add/{offset}</Item>
+              <Item>/composition/clips/selected/effects/video/{offset}</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/{parameter}/reset</Item>
+              <Item>/composition/clips/selected/{parameter}/reset</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/select</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/connect</Item>
+              <Item>/composition/clips/selected/connect</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/open</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/openfile</Item>
+              <Item>/composition/clips/selected/open</Item>
+              <Item>/composition/clips/selected/openfile</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/clear</Item>
+              <Item>/composition/clips/selected/clear</Item>
+              <Item>/composition/clips/by-id/{clip-id}</Item>
+              <Item>/composition/clips/by-id/{clip-id}/effects/video/move</Item>
+              <Item>/composition/clips/by-id/{clip-id}/effects/video/move/{offset}</Item>
+              <Item>/composition/clips/{clip-id}/effects/video/add</Item>
+              <Item>/composition/clips/{clip-id}/effects/video/add/{offset}</Item>
+              <Item>/composition/clips/{clip-id}/effects/video/{offset}</Item>
+              <Item>/composition/clips/{clip-id}/{parameter}/reset</Item>
+              <Item>/composition/clips/by-id/{clip-id}/select</Item>
+              <Item>/composition/clips/by-id/{clip-id}/connect</Item>
+              <Item>/composition/clips/by-id/{clip-id}/open</Item>
+              <Item>/composition/clips/by-id/{clip-id}/openfile</Item>
+              <Item>/composition/clips/by-id/{clip-id}/clear</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/thumbnail</Item>
+              <Item>/composition/clips/selected/thumbnail</Item>
+              <Item>/composition/layers/{layer-index}/clips/{clip-index}/thumbnail/{last-updated}</Item>
+              <Item>/composition/clips/selected/thumbnail/{last-updated}</Item>
+              <Item>/composition/clips/by-id/{clip-id}/thumbnail</Item>
+              <Item>/composition/clips/by-id/{clip-id}/thumbnail/{last-updated}</Item>
+              <Item>/composition/thumbnail/dummy</Item>
+              <Item>/composition/effects/by-id/{effect-id}</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="M3zroKduPaaObgXZGr9tag" Comment="" Bounds="164,1290,380,358" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Spread" />
+              <p:TypeArguments>
+                <TypeReference LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="TypeFlag" Name="Spread" />
+                  <p:TypeArguments>
+                    <TypeReference LastCategoryFullName="Collections" LastDependency="VL.CoreLib.vl">
+                      <Choice Kind="TypeFlag" Name="Spread" />
+                      <p:TypeArguments>
+                        <TypeReference LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+                          <Choice Kind="TypeFlag" Name="String" />
+                        </TypeReference>
+                      </p:TypeArguments>
+                    </TypeReference>
+                  </p:TypeArguments>
+                </TypeReference>
+              </p:TypeArguments>
+            </p:TypeAnnotation>
+            <p:Value>
+              <Item />
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/parameter/by-id</Item>
+                  <Item>/{parameter-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/parameter/by-id</Item>
+                  <Item>/{parameter-id}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/effects/by-id</Item>
+                  <Item>/{effect-id}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/columns/{column-index}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns/by-id</Item>
+                  <Item>/{column-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns/by-id</Item>
+                  <Item>/{column-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns/by-id/{column-id}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns/by-id</Item>
+                  <Item>/{column-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/columns/by-id</Item>
+                  <Item>/{column-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/effects/video</Item>
+                  <Item>/{effect-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/selected/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/selected/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/selected</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers</Item>
+                  <Item>/{layer-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id/{layer-id}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id/{layer-id}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id/{layer-id}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id/{layer-id}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/by-id</Item>
+                  <Item>/{layer-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/effects/video</Item>
+                  <Item>/{effect-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/selected/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/selected/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/selected</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups</Item>
+                  <Item>/{layergroup-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/{layergroup-index}/columns</Item>
+                  <Item>/{column-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id/{layergroup-id}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id/{layergroup-id}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layergroups/by-id</Item>
+                  <Item>/{layergroup-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks</Item>
+                  <Item>/{deck-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks</Item>
+                  <Item>/{deck-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/decks/{deck-index}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks</Item>
+                  <Item>/{deck-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id</Item>
+                  <Item>/{deck-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id</Item>
+                  <Item>/{deck-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id</Item>
+                  <Item>/{deck-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id</Item>
+                  <Item>/{deck-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id/{deck-id}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/decks/by-id</Item>
+                  <Item>/{deck-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video</Item>
+                  <Item>/{effect-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/clips/selected/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/selected/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/selected</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id/{clip-id}/effects/video/move</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/{clip-id}/effects/video/add</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/{clip-id}/effects/video</Item>
+                  <Item>/{offset}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/{clip-id}</Item>
+                  <Item>/{parameter}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips</Item>
+                  <Item>/{clip-index}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/layers/{layer-index}/clips/{clip-index}/thumbnail</Item>
+                  <Item>/{last-updated}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/selected/thumbnail</Item>
+                  <Item>/{last-updated}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id</Item>
+                  <Item>/{clip-id}</Item>
+                </Item>
+              </Item>
+              <Item>
+                <Item>
+                  <Item>/composition/clips/by-id/{clip-id}/thumbnail</Item>
+                  <Item>/{last-updated}</Item>
+                </Item>
+              </Item>
+              <Item />
+              <Item>
+                <Item>
+                  <Item>/composition/effects/by-id</Item>
+                  <Item>/{effect-id}</Item>
+                </Item>
+              </Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Ry9V7QufwBcOFw26ZabcAN" Comment="" Bounds="-304,1151,272,42" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Aou3mbqQBrbPtDMTC9wYuk" Comment="" Bounds="-1085,1080,515,196" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VCEC4MWteiXQZgxXBIJ16L" Comment="" Bounds="-264,1050,35,33" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="JImanhSWGM5P6FC8ffFQ0q" Comment="" Bounds="409,1080,207,131" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="Dcv0ZMs8jM5LUfCaRCbUcz" Comment="" Bounds="786,1080,577,131" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="PhDUGi5HPjAQCA4VkYZREl" Comment="" Bounds="-518,1100,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SZz3TDe8WhNNlMoFji9PC9" Comment="" Bounds="-648,1250,370,173" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="FjxHOomGbwLNdaVhOkfQHb" Comment="" Bounds="-320,1110,190,132" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="P9e5r0uc5jqO1Ro7vD5YXP" Name="Create" />
         <Patch Id="U02yrayFSzmOU2Tj8aUnft" Name="Update" />
@@ -271,14 +2167,7 @@
         <Link Id="TN0ba7HrUyoPRBxjV2Lswl" Ids="NOe35bf9D5HLbQFUej61jM,I2IJ5hAaocRMMtj2vMUcmI" />
         <Link Id="G85PYQLmHVUOcnXT0Qa0OA" Ids="KD7DPmLXhqnPRK25fQXLot,TM0XAkkuipEQRpBYQhsSfg" />
         <Link Id="JHA52hKEKPcN4W5YPRejYB" Ids="NYVZHCBEShOQTsxGDISEeX,OT2tT6agCv7Mu1nLko2Dul" />
-        <Link Id="VEBzCFu6evAOOxCCfNk7Oc" Ids="MonUvrpU1ZSLo5Ccg3yy5a,GDeHFD6MwckLmZXBtqaJHu" />
-        <Link Id="UXTbXOYY5daMnIH9A2GBCc" Ids="GDeHFD6MwckLmZXBtqaJHu,EE2ChPIFpYfNHDKqJ4iogK" />
         <Link Id="TPpG2hTJ6M1M1UHqKQK3pE" Ids="MtN5h87nAjQMVRd2VgXQgO,A5bhiyc8XFYMVZLDelhP8c" />
-        <Link Id="JsN8oi8sf8fOZqkOAU4FEs" Ids="D0p9TlBg2sSPHhfewPc0Zx,G6tKx0tHgrEODyEku36a2q" />
-        <Link Id="JQTzF4Uhrr1MWm7W1Y3hQe" Ids="G6tKx0tHgrEODyEku36a2q,NmF3LilT8O5NVtj5M3R6Yd" />
-        <Link Id="PqYrqJHoUHyQQdKEoX0GJ3" Ids="NmF3LilT8O5NVtj5M3R6Yd,Q6YtRrDNYHOPisPZ3csqcq" />
-        <Link Id="J3UMoOQ1KCLLiIOWyCw0Jw" Ids="C0gY59B0vnOO4hOfRvWpnN,AJNKFXRKW00L2x3aYUt0Bt" />
-        <Link Id="CLWg6Is34xAN3gyzNNvNoq" Ids="AJNKFXRKW00L2x3aYUt0Bt,NQm0Tm5ZRJNLxz8yZWrID7" />
         <Link Id="VQtYsqtWY1vOju8MwEIAgS" Ids="QGh3jjZCqudQC8EhX0n5qL,NDuqnh4L60GL23l7pdd04H" />
         <Link Id="QOh4aEs3KheP9A4GU1iDr9" Ids="U9RiWpQ64LmQFfukBgFVrR,ESonMxEB1YRP0EVW8C1Jkd" />
         <Link Id="HzpI266yCkxLHC9nRLOg2v" Ids="SEPq44IpsWSOTHAGnQKvr8,I0VWkM0H35bOlg1OAe2KFX" />
@@ -288,12 +2177,108 @@
         <Link Id="S6St0cTTF0AOZJKBC9c0po" Ids="OfjyCnwoV4ENnGdvUgYzlF,TeSJcZ1XMyAOfr5OcB5Kbs" />
         <Link Id="QLj3Y0j6w6XLr2NwDhM467" Ids="EG5ZeSDQeqxM8eQtonF91F,K9OnCid3fYnLLRAMp41E2A" />
         <Link Id="EzoZcd9hDSzMG1yyskP5Iy" Ids="BdvDleuRWGdN0OA3BSv4ik,Igz4BCQ4F5jOSAkL6fVyhq" />
-        <Link Id="FRGTSOpvILpPGmAmgkhb2y" Ids="QHle2MKuYPTMAW1o5jNdwA,UMg0MjpSLKXNuuWXQbXrzi" />
-        <Link Id="SkDSgNeLnHOMYQyjVDS0Cu" Ids="UMg0MjpSLKXNuuWXQbXrzi,Dh4pmxSpqHvO4q5FnN6YlN" />
         <Link Id="DYX8WRzEB5AOORMiUxr9Gb" Ids="BdvDleuRWGdN0OA3BSv4ik,Eid9yutA1F0Nr3m5Q6Ox0r" />
         <Link Id="CY0ZMCqeKqCQDeUQEDCA2e" Ids="RerIp0jq3cBMuAQm4XNpDE,DxwAWVJ3KabN2gxU8k1ox7" />
-        <Link Id="IDD4dbvvlR4OPfIrE5dmcx" Ids="OOY0sgzH0e9QZSwy6Ljfmv,IADot1XNmYxNw15CMoc9zO" />
-        <Link Id="UP5pdvYqn0LOdrzeYxuBl8" Ids="IADot1XNmYxNw15CMoc9zO,DeeVO6RcoLONaWxazuPkhL" />
+        <Link Id="EOszwZWL597OjEsNMZGlfx" Ids="NKyLXy97QdHOyeWwu4OAKc,IBshfYxbEDCP6BBGkpBl09" />
+        <Link Id="IhaCDvRySwENHmH6XR9pDJ" Ids="LEnjAuIbwdeMto0vbovRyb,Ki96KKJixHSOdTn2RTYRIa" />
+        <Link Id="MWVKjDgwEWBMCmHnb0zlX5" Ids="HZeOFHMC7RzLPXU9kptd9H,DOoAlkFNpg7M0oegVbEyCC" />
+        <Link Id="KlZD4CFhfmNMm0IurRF1u6" Ids="DOoAlkFNpg7M0oegVbEyCC,IcyC1FAfDGnPy9UtmtPQkY" />
+        <Link Id="BiDisEL9xmBMrxZkYNc9QY" Ids="K0JpqjwfbVjPJSWKXha51Z,SOWQBbrKlBvMa37gYGFwTh" />
+        <Link Id="DcSeg3MZFIkNjOB39Zp4rh" Ids="DOoAlkFNpg7M0oegVbEyCC,IeDdJwVFDRxLeWzM8K01EF" />
+        <Link Id="Cn5hy2hf8YrPn5RBz8tXWp" Ids="D8R5I2E2qZ8PwanRKJRNKa,K0JpqjwfbVjPJSWKXha51Z" />
+        <Link Id="KQTh0HcCEUPPGPKFp7NOGY" Ids="SDXcHuEJr0ML7PWjMkITSd,RsUZvYBr47oNxQOBe1Bm9s" />
+        <Link Id="Njaki2DwuEuOb1gvUyHqZb" Ids="MCJ8oj2YgCLOmuC0DbOH51,I1pYaF30LWZOdrqWRDP6iU" />
+        <Link Id="RSVO216wTg6Nolah9VTOmH" Ids="Joq2zyujR87PshxcdjKKql,JRM6taCBWT9P3bspdAP0rB" />
+        <Link Id="NOKncJgFEUmMrI21Dkj4do" Ids="Gc3GFmkn4QELfWOZ2HcgLw,Fxskn8KO2YrNOjwEpI2Bmj" />
+        <Link Id="TOdf3r2KWIJMiuu3Tw1tJN" Ids="Joq2zyujR87PshxcdjKKql,Nwei9ecTfEyPpSZ5qgAYqZ" />
+        <Link Id="LLKz8J84jzBQPRJpoP1uwO" Ids="IHjGy9s7LWBPBj9nEBZ2W4,BefjsiUTpLZNX15XTPxgRQ" />
+        <Link Id="IKEdtRInckzNtSe19umqri" Ids="MCJ8oj2YgCLOmuC0DbOH51,Joq2zyujR87PshxcdjKKql" />
+        <Link Id="DuGaOcGi0lrPhau9sdUWOO" Ids="GQm8uHD4vKWPnqls5hhF2L,RjVVdlyrME6MLeP5iDNIGh" />
+        <Link Id="Ig4gpOGNJ0VQFcl59T7jx7" Ids="CdfePHzJAWvN5T4mZ7cM3T,D7ize5r6OZ6L4FS8tpJxA0" />
+        <Link Id="J4bP8xsKtTkP8ieqwlgyxx" Ids="KEw0otp0hjBNtJ4vvQN6M8,B0b3JZOIHQNLanE55AaEfW" />
+        <Link Id="SsgyRiB1vZYLs84YliuwbT" Ids="QHle2MKuYPTMAW1o5jNdwA,I5SBZeDFta6QB1HR0t3k5G" />
+        <Link Id="Ely85lhvLHvQZuOomqub1T" Ids="I5SBZeDFta6QB1HR0t3k5G,Qu5xvL0Isf1QcrjBJglhk4" />
+        <Link Id="LHZ8N1n1kBUPEQLDtaSzcd" Ids="MjnCgBFjmv4NTZ9JQwRTIV,LnmYaxHuyp2PkpnUTKFvhs" />
+        <Link Id="M1CdPbIl2ZmL1FotFTfMNH" Ids="C8FiR5cGglmLyqtxuVRVhP,JX81sxCSNAcQKiK28GSjoz" />
+        <Link Id="KHTPGPG8BfjMpwygjtX8aO" Ids="JX81sxCSNAcQKiK28GSjoz,Pd9DjkzQW3sNihzUPPymUs" />
+        <Link Id="Rps0R9k2F1pOCDe0drkkBk" Ids="Gsksiag6bSJNQC4uw35yni,J322nCRvGIoO5rW4ADk2as" />
+        <Link Id="MkNtFvmbKXsQWNXxTci15Q" Ids="HRfvuTjMFb1Oy4NwFokfBa,KUqNI8wfR50OqKzyHbYtLh" />
+        <Link Id="BUvlcvYknwOQCmJL3Pa2xA" Ids="KUqNI8wfR50OqKzyHbYtLh,CdyoyVJxcxWMvXK7rXubSg" />
+        <Link Id="JKquuxbIrwqLcYPUW3Lnmn" Ids="CdyoyVJxcxWMvXK7rXubSg,HrFjj4YXIZRLJytEE8YRs7" />
+        <Link Id="FImuwGGajL6P1LK7y00imV" Ids="HrFjj4YXIZRLJytEE8YRs7,AhvR1KKtEe2QRRFMU5yOxX" />
+        <Link Id="L6CUaA6dVwhNVf6u0lwP3D" Ids="DU4qfEJ7MRJLTph96xeTrs,Tmmoi4Th60cM7yxUwoEj5L" />
+        <Link Id="VdYwSRTtlvkOilHJLwTox8" Ids="BsA1sWfbzfhLGjb3NgxNwh,J5XHcx8BverPLUInlVSmyd" IsFeedback="true" />
+        <Link Id="AKcCGAzUwScQUDWqZ7HFRS" Ids="SB0xT3n5ZowNq5dCa3V08X,J5XHcx8BverPLUInlVSmyd" />
+        <Link Id="O1rTlrqOnddMvaB0AyGd7o" Ids="J5XHcx8BverPLUInlVSmyd,Othpw55prk9NKRIb82oV09" />
+        <Link Id="Cg0O4ZgyivLMkXmG9FyGxb" Ids="LQnItabtEIHNBUU2KUYg9f,FL0PU9j7IpDLqUsxwmOMcR" IsFeedback="true" />
+        <Link Id="Hi1NONtZkqeOPIoD5HBybS" Ids="Othpw55prk9NKRIb82oV09,FL0PU9j7IpDLqUsxwmOMcR" />
+        <Link Id="BN5767aEKtUPQHFKQu8oCJ" Ids="FL0PU9j7IpDLqUsxwmOMcR,GvZZfYyiKPoNxYkG1Gauc9" />
+        <Link Id="GdTp5clXVQ9NiGy5wNmvay" Ids="GvZZfYyiKPoNxYkG1Gauc9,OTbaEH4BygvQVlP197FqN5" />
+        <Link Id="IJEAPgm9CEULVr5nQbkzcJ" Ids="OTbaEH4BygvQVlP197FqN5,Qrbrg1sZtbyQHFtRBYW1jq" />
+        <Link Id="UENlg7QQmAXPqzqleph6Y0" Ids="Iase9ema5iVLObJIDCQgdg,QYnEOy4zfTNLzw816Zy66t" />
+        <Link Id="JT5UsQS2bF4PWKwqAXLoEs" Ids="QYnEOy4zfTNLzw816Zy66t,R69RsD2gEbqLvkH6DmViCj" />
+        <Link Id="LdCPUTLTWTZM3MUSP3QnqI" Ids="R69RsD2gEbqLvkH6DmViCj,SgEScYOHHOnPM1ozp0GGJD" />
+        <Link Id="FbpHzxLCTmJOJULTadBLu3" Ids="DU4qfEJ7MRJLTph96xeTrs,GO2VRhO1vfuLWzeBhagPov" />
+        <Link Id="Qu77bFV6B2VP5WiWvkjCD5" Ids="DU4qfEJ7MRJLTph96xeTrs,OBRxVPIeuZMP4X9zzO7IWL" />
+        <Link Id="Khd9Y5itr7zOXrHdCHg69b" Ids="HKTVocOzH5bLactE2yZkJ3,Tb9HZM4GJvyOUWwYxRTbMA" />
+        <Link Id="Qh8tM8QhunfPXraueAoQYL" Ids="C8FiR5cGglmLyqtxuVRVhP,L3b6to5cgwyQBg4e6n5WDH" />
+        <Link Id="VYoPOw6A5oOP1Y6Qk3rzuL" Ids="LEhRI3qmPILQQNQjmgPE4F,Usx41HH7SELOzlvMGKjOvV" />
+        <Link Id="F7aWOaYnCweMjNqQm9eB8G" Ids="Usx41HH7SELOzlvMGKjOvV,VO3czz8VG4hPJrqjNBBwOF" />
+        <Link Id="EpJxsQTKL8xML5uqYZFSIv" Ids="UGDYhO7L5vrLiQy8BGNpEn,RTKLADm5IrEM1fpet8Tnz3" />
+        <Link Id="OC7TlUrBvr0Mmp56BKZkdh" Ids="O59BLO827cIMsOLRKzKbHa,Qo8BpiiUhb5NBsm9KFwLMG" />
+        <Link Id="N7an0HcM3SMN6D9lFMKtEa" Ids="O59BLO827cIMsOLRKzKbHa,BYX8cbFPuU5LdBI2R53LjB" />
+        <Link Id="Qz0utNtjd3uQX87PS2Oxro" Ids="UbrnBSYCdHyPsYhUunA0hP,SLSGxLyxoArOnWnW8D6JoM" />
+        <Link Id="Ko6NW5lHIqKNlJqkZDSVpX" Ids="SLSGxLyxoArOnWnW8D6JoM,Ry9V7QufwBcOFw26ZabcAN" />
+        <Link Id="IjVJCFDYGBjMJBqMSNQq23" Ids="O59BLO827cIMsOLRKzKbHa,FiQ06TeHhhFPwZbGvcfs1u" />
+        <Link Id="HXwe9sZGd8vNjjKVGufH7z" Ids="IRPD21jyVpAQKX9wIEkaFX,KFXkkJNuH9rOjMD0VZeZsK" />
+        <Link Id="Pt2J79HpUl6MOWfHioAqCD" Ids="FEge1gqrYvDPYqHlanSAYo,QfYGM4xDjsiL9no3iFGuHM" />
+        <Link Id="CrtQrhQ58e7McEOcQYYoHB" Ids="IGGDraLYfQAQHyIGqjEChF,Aou3mbqQBrbPtDMTC9wYuk" />
+        <Link Id="EAuaVAIas8fL6veezxOOOu" Ids="P1Or2jqA7RAO8dcqZLy7Nc,JnBCnMfiveuLuD5KXeojQ1" />
+        <Link Id="P3xHeZHj3RdP2PX95v4mqM" Ids="JnBCnMfiveuLuD5KXeojQ1,ArYL2lhWysXPTQGJuEgMAi" />
+        <Link Id="EUVaG0pG0dPPGDXIt7czIm" Ids="MY4FW7Y3GwoMVS7IQe52YF,IGGDraLYfQAQHyIGqjEChF" />
+        <Link Id="VSvOu8LDKfAOpRqXwlixzI" Ids="R8OhLRAUppuNCYnECY04yw,IVgajgZXOe6NausVw7A4VU" />
+        <Link Id="CP1StAhwmQEMS8EIlDJI1B" Ids="SUUeTQu4ek9M9WrSRp1Aij,VCEC4MWteiXQZgxXBIJ16L" />
+        <Link Id="NtsvTDN1iLRNHAR5G4ZV2c" Ids="R8OhLRAUppuNCYnECY04yw,ODLsxxIyfkDQDvUqPhE0SE" />
+        <Link Id="FXJvUjOcIdHQSip8zemCnL" Ids="IVgajgZXOe6NausVw7A4VU,TxuAMa20Xi2QCXNIpUgnCD" />
+        <Link Id="LgnLHU9zzGRLyYAbvCpDlj" Ids="RrH2BudqANjMGoUppeGg1F,C9S5LQ0BbedQOLxNtlrP4Y" />
+        <Link Id="TprrUL6O8lRNqA8z3Va6bz" Ids="Em0L9uQWAgwO03KT33ecC8,RmKlH3DSF6qLTSELUUWMVQ" />
+        <Link Id="ViEYTeiJ0O0MfXiOM59Gq9" Ids="BujbO0Bkrp7NVs2bdVam1C,LqLpOMwPoXHN8HyvQkdqNE" IsFeedback="true" />
+        <Link Id="KMWfvzZAMTLLUBBklA6dfv" Ids="C9S5LQ0BbedQOLxNtlrP4Y,LqLpOMwPoXHN8HyvQkdqNE" />
+        <Link Id="BsdwDAb1OJdMnCxynk4USA" Ids="LqLpOMwPoXHN8HyvQkdqNE,SUUeTQu4ek9M9WrSRp1Aij" />
+        <Link Id="F3jSSxxm82BOyR2VyGDg1q" Ids="JnBCnMfiveuLuD5KXeojQ1,QeIaW6uB3uwLkCHnjwllAK" />
+        <Link Id="UMkC9JuqIjCMsNRtQdb5iH" Ids="JWGZG7aWe2vL2d7SPERC87,AABI5O4PeRnQWEiiKoIOlZ" />
+        <Link Id="OqwMs4wIic4OtbOMb727YG" Ids="DlPfYP4ER1mMr4l41NKbf3,URJMhGZRgViM0KGxrfohbY" />
+        <Link Id="EZmKZa60FZfNqE8filqMns" Ids="URJMhGZRgViM0KGxrfohbY,TrbOWuyQXOoNlSAeAkDqcp" />
+        <Link Id="DwUqg4LTWDcPyLTIkBfbAB" Ids="MBS3brTIsskMOmrByjzBAZ,NaO7VxCZOdNPZnanDW3ak3" />
+        <Link Id="In5rMZojGzRQLRpDPMDgZc" Ids="BNaUm6XZSEhMEMIOaFnMT6,DMn27wSwWfOLjhjpamsuur" IsFeedback="true" />
+        <Link Id="QDcINf5Cd1YNSqVG3HpEpC" Ids="D4G0d8r609WQUmSnuD697Y,DMn27wSwWfOLjhjpamsuur" />
+        <Link Id="Td7FGnBLYxuMG3vvST0c4n" Ids="DMn27wSwWfOLjhjpamsuur,TLZYFOtQVZZNh5o3431HMJ" />
+        <Link Id="OFt61m1GtUhPQeZEkVnNn8" Ids="BpjR2yCxM0nOHka3nrRDvw,ACVCcachBX8NL1InAXUuGR" IsFeedback="true" />
+        <Link Id="EffZV3J9R7zLUW7sHA6BX4" Ids="TLZYFOtQVZZNh5o3431HMJ,ACVCcachBX8NL1InAXUuGR" />
+        <Link Id="EtCuF6zqb93MToM7GH8N0l" Ids="ACVCcachBX8NL1InAXUuGR,Hxsl9WlqosBLeG71Uz0ECf" />
+        <Link Id="TAgcRakk17PLf7gRQxqyOD" Ids="Hxsl9WlqosBLeG71Uz0ECf,EVq03MKuSz9MTihNsxNawn" />
+        <Link Id="RmV4gH38eAZNHGYMMtZyiK" Ids="EVq03MKuSz9MTihNsxNawn,JImanhSWGM5P6FC8ffFQ0q" />
+        <Link Id="FcN1tPDxHnyPoRipLlALPf" Ids="Gsksiag6bSJNQC4uw35yni,UDhblNgQJe7LGs7j3MsmwV" />
+        <Link Id="DpwfYZRoNYZP00wvyhq2sp" Ids="Bpeb8yGBaVvPXfVjZ4gwws,NEXpUISIb7tMEyff99D82N" />
+        <Link Id="HFAJnYPHXpNNQhF84xXZpj" Ids="NEXpUISIb7tMEyff99D82N,JYDTLfyAmVeOtGBrgyDoen" />
+        <Link Id="FrGvL5RT8f8LxIxHCukuXi" Ids="JYDTLfyAmVeOtGBrgyDoen,IhWiioQkl7MMfahA8ZRE5b" />
+        <Link Id="AaW9R1FQ7evLey72cCDBYw" Ids="IhWiioQkl7MMfahA8ZRE5b,Dcv0ZMs8jM5LUfCaRCbUcz" />
+        <Link Id="TJLbc22eY4lNGdUQLcSPJB" Ids="JWGZG7aWe2vL2d7SPERC87,EWWETkZgqT4L01ETDMubhM" />
+        <Link Id="BiXHY7WsMIOOpTAr3G2FSI" Ids="EL4klIrScWjMpfvtUttDVA,S4Yhej85HvzNTnCh77NbD6" />
+        <Link Id="OO5KGfFXBxnLVqTx8EWvDP" Ids="ROZ0xiq710YO1Q2DSBDiDh,PhDUGi5HPjAQCA4VkYZREl" />
+        <Link Id="Ng48A9DV0a9LQzKc09xdJR" Ids="JWGZG7aWe2vL2d7SPERC87,TkcdLbXjNkqOaV4weoblRv" />
+        <Link Id="A9W4lpEEYTNNTvECCcgSIf" Ids="CMSj7pZi9fwPmc1g5eur4Q,RzaOkn6paJ4McL8SvnSbJh" IsFeedback="true" />
+        <Link Id="DWNAliMrH4wMZZTr5LrTwI" Ids="IQQFT57x0ZfQD4gRVIzrw5,RzaOkn6paJ4McL8SvnSbJh" />
+        <Link Id="Q3KnTshBqYDO1EZjhAqcsg" Ids="FCHXSP02pguPgFkI8arzzk,SZz3TDe8WhNNlMoFji9PC9" />
+        <Link Id="MrKOxy6dgQoPSw9liYRntL" Ids="IQQFT57x0ZfQD4gRVIzrw5,S23VKGTYMOJPqqluC9Ufwt" />
+        <Link Id="JBFHCtlp4EANf83l3pkNFe" Ids="S23VKGTYMOJPqqluC9Ufwt,FCHXSP02pguPgFkI8arzzk" />
+        <Link Id="VEZN8jmPxScOCuKz2kUDHx" Ids="Saj799D2aqVQSTjxKtQtqi,MY4FW7Y3GwoMVS7IQe52YF" />
+        <Link Id="GZhMxfM9SkOOEkqCLLNqmP" Ids="O59BLO827cIMsOLRKzKbHa,OYETS0h4GFoMurbusMdnv1" />
+        <Link Id="SlWsj7hYjx0LnG1Cj7N28A" Ids="Gv2xoGnFv3qMl2WHCogDly,E6tKX62vQ0LMC3frL9hqIw" />
+        <Link Id="TswYQg945NyPblgiuEc5lh" Ids="E6tKX62vQ0LMC3frL9hqIw,FjxHOomGbwLNdaVhOkfQHb" />
+        <Link Id="VVdPjxOzp2sMCaYyF5mOTt" Ids="O59BLO827cIMsOLRKzKbHa,FJOTn3RQBy8O8t17hTbFSI" />
+        <Link Id="F7Jw3zW47iZMID8OnNRUKK" Ids="GKu43Fdl1K6OLgp2006EB6,QHVF7EKwk5OM5klCnXwSez" />
+        <Link Id="P849IS8YIDpQa1Iug9xzXF" Ids="D4cgKvNIOHuPIM1DB9rY7H,ROZ0xiq710YO1Q2DSBDiDh" />
       </Patch>
     </Node>
   </Patch>
@@ -302,4 +2287,5 @@
   <PlatformDependency Id="A1Lvcp1Zp8sLfpd8HFgw9t" Location="System.IO" />
   <PlatformDependency Id="FN6tRCoBi4xPwqATVOi08j" Location="System" />
   <NugetDependency Id="QGZOERzyodfNMUdwkXDmur" Location="Microsoft.OpenApi.YamlReader" Version="2.3.0" />
+  <PlatformDependency Id="RKMT7joBT4WLMI8epAsYZo" Location="System.Net.Http" />
 </Document>

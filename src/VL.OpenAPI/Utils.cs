@@ -4,6 +4,12 @@ using System.Text.RegularExpressions;
 
 namespace VL.OpenAPI
 {
+
+    public enum ApiFileFormat
+    {
+        yaml,
+        json
+    }
     internal class Utils
     {
         // Credits : https://stackoverflow.com/a/46095771
