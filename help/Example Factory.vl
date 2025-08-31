@@ -58,7 +58,7 @@
             <Pin Id="R7eu2Gxg3GqLhRyxNfXGHj" Name="Response" Kind="OutputPin" />
             <Pin Id="DN6oK5ff7lQPF6suwyMGGM" Name="Execute" Kind="OutputPin" />
           </Node>
-          <Node Bounds="388,231,68,19" Id="TMnKl5ohY7ELGluUwSPAQP">
+          <Node Bounds="416,200,68,19" Id="TMnKl5ohY7ELGluUwSPAQP">
             <p:NodeReference LastCategoryFullName="Resolume.YAML.GET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <CategoryReference Kind="Category" Name="Resolume" />
@@ -75,7 +75,7 @@
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="EczN1T7TZetL5rIjIonWXs" Comment="" Bounds="430,341,901,738" ShowValueBox="true" isIOBox="true">
+          <Pad Id="EczN1T7TZetL5rIjIonWXs" Comment="" Bounds="628,360,901,738" ShowValueBox="true" isIOBox="true">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -95,6 +95,15 @@
           <Pad Id="TyQThaOOznXNyFjmmaa2JG" Comment="Content Types" Bounds="182,440,98,95" ShowValueBox="true" isIOBox="true" />
           <Pad Id="VvlLMv1zKDVOGfhrJTcl47" Comment="Bundles" Bounds="295,600,190,132" ShowValueBox="true" isIOBox="true" />
           <Pad Id="QP5BlWpoVCoPlMc0Qol7lx" Comment="Execute" Bounds="470,310,35,35" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="727,190,57,19" Id="VT3Ol6vmUAxNLMpXKsJ8OW">
+            <p:NodeReference LastCategoryFullName="Directus.JSON.GET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Directus" />
+              <CategoryReference Kind="Category" Name="JSON" />
+              <CategoryReference Kind="Category" Name="GET" />
+              <Choice Kind="ProcessNode" Name="GetAsset" />
+            </p:NodeReference>
+          </Node>
         </Canvas>
         <Patch Id="IeOH0EfVFH9NAr1fmiLoyp" Name="Create" />
         <Patch Id="Obcpr8HlLMpMIwmj8mjc9h" Name="Update" />
@@ -104,7 +113,6 @@
         </ProcessDefinition>
         <Link Id="BUyFw2uqnR4ObBB1PjE1OX" Ids="VE7BZNXxiPbMPQvTplYiTN,NivATtCyBGlL2nI4QAQgl3" />
         <Link Id="QHns7WM0nzxLKXQTYknuZa" Ids="DnjA5U8ebV7OC9CVHSGx6o,OfzEpP84DDnNKXGHRuyQsg" />
-        <Link Id="NdM4Wk3xXc9QLPVoWxS5ZX" Ids="VE7BZNXxiPbMPQvTplYiTN,R1pQnB8S3v3NGobMMuk52d" />
         <Link Id="I0da4tXf7rTLpcSxm1A5ZD" Ids="EyyvOVrHAvSMn4LStAJtO4,OAVBwjPhjbiP8ICtIEmkMx" />
         <Link Id="L0YOv5JMggwNVq5MPYgNyZ" Ids="R7eu2Gxg3GqLhRyxNfXGHj,EczN1T7TZetL5rIjIonWXs" />
         <Link Id="L6cSEhCrK3oLWEoaK0nHpH" Ids="UJKO2nuqKg2NpRnl7UPNtc,NKt7t9tcwi2K9saVdzD85s" />
