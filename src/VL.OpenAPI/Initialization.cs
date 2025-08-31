@@ -14,7 +14,7 @@ namespace VL.OpenAPI
 {
     public class Initialization : AssemblyInitializer<Initialization>
     {
-        const string apisSubDir = "apis";
+        const string apisSubDir = "openApi";
 
         public override void Configure(AppHost appHost)
         {
@@ -35,38 +35,35 @@ namespace VL.OpenAPI
                     invalidated = NodeBuilding.WatchDir(apiDir)
                 .Where(e => (e.ChangeType == WatcherChangeTypes.Created || e.ChangeType == WatcherChangeTypes.Deleted || e.ChangeType == WatcherChangeTypes.Renamed || e.ChangeType == WatcherChangeTypes.All) && e.Name == apisSubDir);
 
-                    Console.WriteLine("Directory:", directory);
-                    Console.WriteLine("APIs Directory: {0}", apiDir);
-                    Console.WriteLine("APIs Directory: {0}", apisSubDir);
+                    //Console.WriteLine("Directory:", directory);
+                    //Console.WriteLine("APIs Directory: {0}", apiDir);
+                    //Console.WriteLine("APIs Directory: {0}", apisSubDir);
                     string[] restAPIDescriptions = Directory.GetFiles(apiDir, "*.*").Where(x=>Path.GetExtension(x)==".yaml" || Path.GetExtension(x)==".json").ToArray();
                     if(restAPIDescriptions.Length >0 )
                     {
                         
                         
                         foreach ( string apiDescriptionFile in restAPIDescriptions ) { 
-                            var ext = Path.GetExtension(apiDescriptionFile);
-                            var fname = Path.GetFileName(apiDescriptionFile);
-                            if(ext == ".yaml" ||  ext ==".json")
+                            var ext = Path.GetExtension(apiDescriptionFile).Substring(1);
+                            var fname = Path.GetFileName(apiDescriptionFile).Split('.').FirstOrDefault();
+                            if(ext == "yaml" ||  ext =="json")
                             {
                                 var Parser = new Parser();
-                                
+                                Console.WriteLine(fname);
                                 Parser.FromFile(apiDescriptionFile);
                                 foreach (var path in Parser.openApiDoc.Paths)
                                 {
                                     foreach (var operation in path.Value.Operations)
                                     {
-                                        if (operation.Key != null)
-                                            builder.Add(new NodeDescription(nodeFactory, fname.ToLower(), operation.Value, operation.Key));
+                                        if (operation.Key != null && operation.Value != null)
+                                            builder.Add(new NodeDescription(nodeFactory, Utils.ToPascalCase(fname) +"." +ext.ToUpper(), operation.Value, path, operation.Key));
                                     }
                                 }
                             }
                                 
-                            //var node = Parser.ToDscritpions(nodeFactory);
-                            //builder.AddRange(node);
+                            
                             Console.WriteLine(apiDescriptionFile); 
 
-                            
-                        
                         }
                         
                     }
@@ -76,6 +73,6 @@ namespace VL.OpenAPI
             });
         }
 
-        static IVLNodeDescriptionFactory openAPIFactory = new OpenAPINodeFactory();
+        //static IVLNodeDescriptionFactory openAPIFactory = new OpenAPINodeFactory();
     }    
 }
