@@ -51,12 +51,25 @@ namespace VL.OpenAPI
                                 var Parser = new Parser();
                                 Console.WriteLine(fname);
                                 Parser.FromFile(apiDescriptionFile);
+                                if(Parser.openApiDiagnostic.Errors.Count >0)
+                                {
+                                    foreach(var err in  Parser.openApiDiagnostic.Errors)
+                                    {
+                                        Console.WriteLine(err.Message);
+                                    }
+                                }
+                                
                                 foreach (var path in Parser.openApiDoc.Paths)
                                 {
+                                    
                                     foreach (var operation in path.Value.Operations)
                                     {
                                         if (operation.Key != null && operation.Value != null)
-                                            builder.Add(new NodeDescription(nodeFactory, Utils.ToPascalCase(fname) +"." +ext.ToUpper(), operation.Value, path, operation.Key));
+                                        {
+                                            
+                                            builder.Add(new NodeDescription(nodeFactory, Utils.ToPascalCase(fname) + "." + ext.ToUpper(), operation.Value, path, operation.Key));
+                                        }
+                                            
                                     }
                                 }
                             }

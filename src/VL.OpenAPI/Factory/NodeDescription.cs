@@ -25,6 +25,8 @@ namespace VL.OpenAPI
 
         private OpenApiOperation FOperation = new OpenApiOperation();
         private KeyValuePair<string, IOpenApiPathItem> FItemPath;
+
+
         public NodeDescription(IVLNodeDescriptionFactory factory, string category, OpenApiOperation operation, KeyValuePair<string,IOpenApiPathItem> itemPath, HttpMethod method) 
         {
             Factory = factory;
@@ -53,11 +55,15 @@ namespace VL.OpenAPI
                 string name = "";
                 string desc = "";
 
+                var pathItemParameters = FItemPath.Value.Parameters ?? new List<IOpenApiParameter>();
+                var operationParameters = FOperation.Parameters ?? new List<IOpenApiParameter>();
+                
+                var allParameters = pathItemParameters.Union(operationParameters);
                 // Retrieve parameters from the OpenAPI dump and create input pins
-                if (FOperation != null && FItemPath.Value.Parameters != null)
+                if (FOperation != null && allParameters.Count() > 0)
                 {
                     
-                    foreach (var parameter in FItemPath.Value.Parameters)
+                    foreach (var parameter in allParameters)
                     {
                         if (parameter != null)
                         {
