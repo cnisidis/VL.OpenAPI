@@ -14,7 +14,16 @@
         <CategoryReference Kind="Category" Name="Primitive" />
       </p:NodeReference>
       <Patch Id="RIdoKrj56YONog5hvPI8Jr">
-        <Canvas Id="GA1jmXdaovkPTTcVifCZGU" CanvasType="Group" />
+        <Canvas Id="GA1jmXdaovkPTTcVifCZGU" CanvasType="Group">
+          <Node Bounds="381,221,56,19" Id="RJSq9tbUahzPuiCH2usXhk">
+            <p:NodeReference LastCategoryFullName="resolume.yamlGET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="resolume" />
+              <CategoryReference Kind="Category" Name="yamlGET" />
+              <Choice Kind="ProcessNode" Name="GetLayer" />
+            </p:NodeReference>
+          </Node>
+        </Canvas>
         <Patch Id="IeOH0EfVFH9NAr1fmiLoyp" Name="Create" />
         <Patch Id="Obcpr8HlLMpMIwmj8mjc9h" Name="Update" />
         <ProcessDefinition Id="Nu0lfGztEDvO0b8lvs4MOr">
