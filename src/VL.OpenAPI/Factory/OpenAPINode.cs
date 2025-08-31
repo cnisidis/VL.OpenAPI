@@ -24,20 +24,21 @@ namespace VL.OpenAPI
         public OpenAPINode(NodeDescription description, NodeContext nodeContext) : base(nodeContext)
         {
             this.description = description;
+
             Inputs = description.Inputs.Select(p => new Pin() { Name = p.Name, OriginalName = ((PinDescription)p).OriginalName, Type = p.Type, Value = p.DefaultValue }).ToArray();
             Outputs = description.Outputs.Select(p => new Pin() { Name = p.Name, OriginalName = ((PinDescription)p).OriginalName, Type = p.Type, Value = p.DefaultValue }).ToArray();
 
-            resultPin = Outputs.FirstOrDefault(o => o.Name == "Result");
-            runPin = Inputs.LastOrDefault();
+            //resultPin = Outputs.FirstOrDefault(o => o.Name == "Result");
+            //runPin = Inputs.LastOrDefault();
 
             // Create RestClient & RestRequest
-            client = new RestClient(description.FEndpoint + description.FPath);
+            //client = new RestClient(description.FEndpoint + description.FPath);
             Method method = new Method();
             //bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
             request = new RestRequest("", method);
 
             // Look for authentication stuff
-            try
+           /* try
             {
                 //authParameterName = description.FSecuritySchemes.FirstOrDefault(x => x.Value.In == ParameterLocation.Query).Value.Name;
                 authParameterName = "";
@@ -48,7 +49,7 @@ namespace VL.OpenAPI
             {
                 authParameterName = "";
                 Console.WriteLine("No query-based authentication found");
-            }
+            }*/
         }
 
         public IVLNodeDescription NodeDescription => description;
