@@ -3,6 +3,7 @@ using VL.Core;
 
 using Microsoft.OpenApi;
 using VL.Core.Diagnostics;
+using RestSharp;
 
 
 namespace VL.OpenAPI
@@ -53,13 +54,6 @@ namespace VL.OpenAPI
                 string desc = "";
 
                 // Retrieve parameters from the OpenAPI dump and create input pins
-                //foreach(var parameter in FOperation.Value.Parameters)
-                //{
-                //    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
-                //    inputs.Add(new PinDescription(parameter.Name, type, dflt, desc));
-                //}
-
-
                 if (FOperation != null && FItemPath.Value.Parameters != null)
                 {
                     
@@ -67,6 +61,7 @@ namespace VL.OpenAPI
                     {
                         if (parameter != null)
                         {
+                            //    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
                             inputs.Add(new PinDescription(Utils.ToPascalCase(parameter.Name), type, dflt, parameter.Description));
                         }
 
@@ -74,13 +69,15 @@ namespace VL.OpenAPI
                 }
 
 
-                    // Adds the trigger pin
-                    //inputs.Add(new PinDescription("Execute", typeof(bool), false, "Sends a query as long as enabled"));
+                // Adds the trigger pin
+                inputs.Add(new PinDescription("Execute", typeof(bool), false, "Sends a query as long as enabled"));
 
-            // For now let's just get the raw JSON response from Directus. Create a single string output pin
-            //outputs.Add(new PinDescription("Result", typeof(string),"", "The raw string response"));
+                // For now let's just get the raw JSON response from Directus. Create a single string output pin
+                //outputs.Add(new PinDescription("Result", typeof(string),"", "The raw string response"));
+                
+                outputs.Add(new PinDescription("Result", typeof(RestBundle), null, "The Result Pin"));
 
-                    FInitialized = true;
+                FInitialized = true;
             }
             catch (Exception ex)
             {
