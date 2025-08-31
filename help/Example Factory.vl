@@ -15,14 +15,86 @@
       </p:NodeReference>
       <Patch Id="RIdoKrj56YONog5hvPI8Jr">
         <Canvas Id="GA1jmXdaovkPTTcVifCZGU" CanvasType="Group">
-          <Node Bounds="381,221,56,19" Id="RJSq9tbUahzPuiCH2usXhk">
-            <p:NodeReference LastCategoryFullName="resolume.yamlGET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
+          <Pad Id="A83RHJyXmAnLOBkUrpnQ4o" Comment="" Bounds="795,329,458,55" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DnjA5U8ebV7OC9CVHSGx6o" Comment="Execute" Bounds="540,190,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KNF2VsC9goiNphdLYdH3Sw" Comment="Clipid" Bounds="360,180,95,15" ShowValueBox="true" isIOBox="true" Value="text">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="HiOwJ1nIqDYNCSTRXDWCy7" Comment="Base Uri" Bounds="479,280,147,15" ShowValueBox="true" isIOBox="true" Value="https://api.twitter.com/1.1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="253,310,65,19" Id="C3kHD2nncM6L4zEdYY4AIk">
+            <p:NodeReference LastCategoryFullName="VL.OpenAPI.Rest" LastDependency="VL.OpenAPI.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="resolume" />
-              <CategoryReference Kind="Category" Name="yamlGET" />
-              <Choice Kind="ProcessNode" Name="GetLayer" />
+              <Choice Kind="ProcessAppFlag" Name="Client" />
             </p:NodeReference>
+            <Pin Id="TIFGmBOfaOyLa3nm7yvwBy" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PYeQv3DTB9ILUWPbLOQoq9" Name="Api Token" Kind="InputPin" />
+            <Pin Id="OAVBwjPhjbiP8ICtIEmkMx" Name="Base Uri" Kind="InputPin" />
+            <Pin Id="R1pQnB8S3v3NGobMMuk52d" Name="Requests" Kind="InputPin" />
+            <Pin Id="HeC0HNkjnilMSTpgAbLNay" Name="Client" Kind="OutputPin" />
           </Node>
+          <Node Bounds="388,270,65,26" Id="IRjws7vRQABQdQUKBBjRyT">
+            <p:NodeReference LastCategoryFullName="VL.OpenAPI.Rest.Bundle" LastDependency="VL.OpenAPI.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Rest" />
+              <CategoryReference Kind="Category" Name="Bundle" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="NivATtCyBGlL2nI4QAQgl3" Name="Bundle" Kind="InputPin" />
+            <Pin Id="KL94y1tMVnuNtiSYg5SPAe" Name="Bundle" Kind="OutputPin" />
+            <Pin Id="UJKO2nuqKg2NpRnl7UPNtc" Name="Request" Kind="OutputPin" />
+            <Pin Id="R7eu2Gxg3GqLhRyxNfXGHj" Name="Response" Kind="OutputPin" />
+            <Pin Id="DN6oK5ff7lQPF6suwyMGGM" Name="Execute" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="388,231,68,19" Id="TMnKl5ohY7ELGluUwSPAQP">
+            <p:NodeReference LastCategoryFullName="Resolume.YAML.GET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Resolume" />
+              <CategoryReference Kind="Category" Name="YAML" />
+              <CategoryReference Kind="Category" Name="GET" />
+              <Choice Kind="ProcessNode" Name="GetClipById" />
+            </p:NodeReference>
+            <Pin Id="MozMYEcPjcsOuVxBrByebu" Name="Clipid" Kind="InputPin" />
+            <Pin Id="OfzEpP84DDnNKXGHRuyQsg" Name="Execute" Kind="InputPin" />
+            <Pin Id="VE7BZNXxiPbMPQvTplYiTN" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="EyyvOVrHAvSMn4LStAJtO4" Comment="Base Uri" Bounds="285,260,260,15" ShowValueBox="true" isIOBox="true" Value="http://192.168.1.2:8080/">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="EczN1T7TZetL5rIjIonWXs" Comment="" Bounds="430,341,901,738" ShowValueBox="true" isIOBox="true">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="NKt7t9tcwi2K9saVdzD85s" Comment="Request" Bounds="410,390,190,132" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="253,340,45,26" Id="ApGtGqib93BLx1AFhUJirf">
+            <p:NodeReference LastCategoryFullName="VL.OpenAPI.Rest.Client" LastDependency="VL.OpenAPI.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Client" />
+              <Choice Kind="OperationCallFlag" Name="Split" />
+            </p:NodeReference>
+            <Pin Id="H4gE84kqGRbOjN8XNLZCsV" Name="Client" Kind="InputPin" />
+            <Pin Id="PavcB90Wc8eN3Rw29o5NIH" Name="Client" Kind="OutputPin" />
+            <Pin Id="V6tByCE20dnMIw36WPUuJ7" Name="Content Types" Kind="OutputPin" />
+            <Pin Id="CCU5wV7MtN5P4VnmQ4DuYS" Name="Bundles" Kind="OutputPin" />
+          </Node>
+          <Pad Id="TyQThaOOznXNyFjmmaa2JG" Comment="Content Types" Bounds="182,440,98,95" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="VvlLMv1zKDVOGfhrJTcl47" Comment="Bundles" Bounds="295,600,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="QP5BlWpoVCoPlMc0Qol7lx" Comment="Execute" Bounds="470,310,35,35" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="IeOH0EfVFH9NAr1fmiLoyp" Name="Create" />
         <Patch Id="Obcpr8HlLMpMIwmj8mjc9h" Name="Update" />
@@ -30,6 +102,17 @@
           <Fragment Id="VkEht07HxHSNDDvMSysxqu" Patch="IeOH0EfVFH9NAr1fmiLoyp" Enabled="true" />
           <Fragment Id="L9trwTwIr0pLUEeLbTXtdH" Patch="Obcpr8HlLMpMIwmj8mjc9h" Enabled="true" />
         </ProcessDefinition>
+        <Link Id="BUyFw2uqnR4ObBB1PjE1OX" Ids="VE7BZNXxiPbMPQvTplYiTN,NivATtCyBGlL2nI4QAQgl3" />
+        <Link Id="QHns7WM0nzxLKXQTYknuZa" Ids="DnjA5U8ebV7OC9CVHSGx6o,OfzEpP84DDnNKXGHRuyQsg" />
+        <Link Id="NdM4Wk3xXc9QLPVoWxS5ZX" Ids="VE7BZNXxiPbMPQvTplYiTN,R1pQnB8S3v3NGobMMuk52d" />
+        <Link Id="I0da4tXf7rTLpcSxm1A5ZD" Ids="EyyvOVrHAvSMn4LStAJtO4,OAVBwjPhjbiP8ICtIEmkMx" />
+        <Link Id="L0YOv5JMggwNVq5MPYgNyZ" Ids="R7eu2Gxg3GqLhRyxNfXGHj,EczN1T7TZetL5rIjIonWXs" />
+        <Link Id="L6cSEhCrK3oLWEoaK0nHpH" Ids="UJKO2nuqKg2NpRnl7UPNtc,NKt7t9tcwi2K9saVdzD85s" />
+        <Link Id="GwgbsKZXhbjPrKCgkUoeQn" Ids="KNF2VsC9goiNphdLYdH3Sw,MozMYEcPjcsOuVxBrByebu" />
+        <Link Id="Cym7g6KCWhbQbmHFWn1kPh" Ids="HeC0HNkjnilMSTpgAbLNay,H4gE84kqGRbOjN8XNLZCsV" />
+        <Link Id="GlrjKi1d0NwLzba21M58wv" Ids="V6tByCE20dnMIw36WPUuJ7,TyQThaOOznXNyFjmmaa2JG" />
+        <Link Id="I8655YRQwJHLMKr7flnjKs" Ids="CCU5wV7MtN5P4VnmQ4DuYS,VvlLMv1zKDVOGfhrJTcl47" />
+        <Link Id="U0CPvN6iTwrPbFXGvApccW" Ids="DN6oK5ff7lQPF6suwyMGGM,QP5BlWpoVCoPlMc0Qol7lx" />
       </Patch>
     </Node>
   </Patch>
