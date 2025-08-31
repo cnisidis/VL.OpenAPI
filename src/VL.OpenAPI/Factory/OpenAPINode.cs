@@ -12,10 +12,10 @@ namespace VL.OpenAPI
     {
         readonly NodeDescription description;
         readonly Pin resultPin;
+        
         readonly Pin runPin;
 
-        private RestClient client;
-        private RestRequest request;
+        VL.OpenAPI.RestBundle bundle;
 
         private string authParameterName;
 
@@ -28,15 +28,17 @@ namespace VL.OpenAPI
             Inputs = description.Inputs.Select(p => new Pin() { Name = p.Name, OriginalName = ((PinDescription)p).OriginalName, Type = p.Type, Value = p.DefaultValue }).ToArray();
             Outputs = description.Outputs.Select(p => new Pin() { Name = p.Name, OriginalName = ((PinDescription)p).OriginalName, Type = p.Type, Value = p.DefaultValue }).ToArray();
 
-            //resultPin = Outputs.FirstOrDefault(o => o.Name == "Result");
-            //runPin = Inputs.LastOrDefault();
+            
+            resultPin = Outputs.FirstOrDefault(o => o.Name == "Result");
+            runPin = Inputs.LastOrDefault();
 
             // Create RestClient & RestRequest
             //client = new RestClient(description.FEndpoint + description.FPath);
             Method method = new Method();
             //bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
-            request = new RestRequest("", method);
-
+            bundle = new RestBundle();
+            bundle.SetRequest(new RestRequest("", method));
+            //response = new RestResponse();
             // Look for authentication stuff
            /* try
             {
@@ -60,11 +62,16 @@ namespace VL.OpenAPI
         public void Update()
         {
             if (runPin is null || !(bool)runPin.Value)
+            {
+                this.bundle.Execute = false;
                 return;
+            }
+                
 
+            this.bundle.Execute = true;
             // Clear all params except auth!
             // Is it better to do that or just create a new request?
-            foreach(var param in request.Parameters.Where(x => x.Name != authParameterName))
+            foreach(var param in bundle.GetRequest().Parameters.Where(x => x.Name != authParameterName))
             {
                 //request.Parameters.Remove(param);
             }
@@ -75,11 +82,11 @@ namespace VL.OpenAPI
                 // That looks a bit convoluted
                 if (input.Type == typeof(IEnumerable<string>) && ((int)typeof(ICollection).GetProperty("Count").GetValue(input.Value, null)) > 0)
                 {
-                    request.AddOrUpdateParameter(input.OriginalName, string.Join(",", (IEnumerable<string>)input.Value));
+                    bundle.GetRequest().AddOrUpdateParameter(input.OriginalName, string.Join(",", (IEnumerable<string>)input.Value));
                 }
                 else if(input.Type == typeof(string) && !(string.IsNullOrEmpty(input.Value as string)))
                 {
-                    request.AddOrUpdateParameter(input.OriginalName, (string)input.Value);
+                    bundle.GetRequest().AddOrUpdateParameter(input.OriginalName, (string)input.Value);
                 }
                 else if(input.Type == typeof(bool))
                 {
@@ -87,15 +94,25 @@ namespace VL.OpenAPI
                 }
             }
 
-            var response = client.Execute(request);
+            //var response = client.Execute(request);
 
-            resultPin.Value = response.Content;
+            resultPin.Value = this.bundle;
+            
+            //resultPin.Value = this;
         }
 
         public void Dispose()
         {
             Console.WriteLine("Byyyye");
         }
+
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        
 
         IVLPin[] IVLNode.Inputs => Inputs;
         IVLPin[] IVLNode.Outputs => Outputs;
