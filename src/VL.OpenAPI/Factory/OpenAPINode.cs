@@ -2,15 +2,15 @@
 using System.Linq;
 using VL.Core;
 using RestSharp;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using System.Collections.Generic;
 using System.Collections;
 
 namespace VL.OpenAPI
 {
-    internal class OpenAPINode : VLObject, IVLNode
+    sealed class OpenAPINode : FactoryBasedVLNode, IVLNode
     {
-        readonly OpenAPINodeDescription description;
+        readonly NodeDescription description;
         readonly Pin resultPin;
         readonly Pin runPin;
 
@@ -21,7 +21,7 @@ namespace VL.OpenAPI
 
         // This is where we'll run the queries to the Directus instance
 
-        public OpenAPINode(OpenAPINodeDescription description, NodeContext nodeContext) : base(nodeContext)
+        public OpenAPINode(NodeDescription description, NodeContext nodeContext) : base(nodeContext)
         {
             this.description = description;
             Inputs = description.Inputs.Select(p => new Pin() { Name = p.Name, OriginalName = ((PinDescription)p).OriginalName, Type = p.Type, Value = p.DefaultValue }).ToArray();
@@ -33,13 +33,14 @@ namespace VL.OpenAPI
             // Create RestClient & RestRequest
             client = new RestClient(description.FEndpoint + description.FPath);
             Method method = new Method();
-            bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
+            //bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
             request = new RestRequest("", method);
 
             // Look for authentication stuff
             try
             {
-                authParameterName = description.FSecuritySchemes.FirstOrDefault(x => x.Value.In == ParameterLocation.Query).Value.Name;
+                //authParameterName = description.FSecuritySchemes.FirstOrDefault(x => x.Value.In == ParameterLocation.Query).Value.Name;
+                authParameterName = "";
                 request.AddOrUpdateParameter(authParameterName, description.FAPIKey);
                 Console.WriteLine("Added auth parameter " + authParameterName);
             }
@@ -64,7 +65,7 @@ namespace VL.OpenAPI
             // Is it better to do that or just create a new request?
             foreach(var param in request.Parameters.Where(x => x.Name != authParameterName))
             {
-                request.Parameters.Remove(param);
+                //request.Parameters.Remove(param);
             }
 
             // Look for pins that actually have a value and add them as params

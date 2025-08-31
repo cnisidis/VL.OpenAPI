@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="NhijQwk9y0QOPJgLonG3uG" LanguageVersion="2021.4.9.982" Version="0.128">
-  <NugetDependency Id="Sc3MDzTvSUQLjW7acx7vkC" Location="VL.CoreLib" Version="2021.4.9" />
+<Document xmlns:p="property" xmlns:r="reflection" Id="NhijQwk9y0QOPJgLonG3uG" LanguageVersion="2025.7.0-0569-gd8eda191f6" Version="0.128">
+  <NugetDependency Id="Sc3MDzTvSUQLjW7acx7vkC" Location="VL.CoreLib" Version="2025.7.0-0569-gd8eda191f6" />
   <Patch Id="IjVkvRUuGf8MakfQZnbTLx">
-    <Canvas Id="KU2JbiPSwRGMMf0rgjPGVr" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="KU2JbiPSwRGMMf0rgjPGVr" DefaultCategory="VL.OpenAPI" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -24,6 +24,6 @@
       </Patch>
     </Node>
   </Patch>
-  <PlatformDependency Id="HndzPjtxD6CNmV3pFKVCuf" Location="./lib/netstandard2.0/VL.OpenAPI.dll" IsForward="true" />
-  <NodeFactoryDependency Id="CPT6YCHdpy4PrpfmoXoNYK" Location="VL.OpenAPI-Factory" IsForward="true" />
+  <ProjectDependency Id="I913pawoRX1QQ85emxHUQZ" Location="./src/VL.OpenAPI/VL.OpenAPI.csproj" IsForward="true" />
+  <NodeFactoryDependency Id="RtDhCHgoIiTMXaO9vOXASj" Location="VL.OpenAPI-Factory" IsForward="true" />
 </Document>

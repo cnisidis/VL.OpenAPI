@@ -1,15 +1,13 @@
 ﻿using System.Reactive.Linq;
 using VL.Core;
+
+using Microsoft.OpenApi;
 using VL.Core.Diagnostics;
-using Microsoft.OpenApi.Readers;
-using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+
 
 namespace VL.OpenAPI
 {
-    class OpenAPINodeDescription : IVLNodeDescription, IInfo
+    class NodeDescription : IVLNodeDescription, IInfo
     {
         // Fields
         bool FInitialized;
@@ -24,13 +22,13 @@ namespace VL.OpenAPI
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
 
-        public OpenAPINodeDescription(IVLNodeDescriptionFactory factory, string category, string endpoint, string path, KeyValuePair<OperationType,OpenApiOperation> operation, IDictionary<string, OpenApiSecurityScheme> securitySchemes, string apiKey)
+        public NodeDescription(IVLNodeDescriptionFactory factory, string category, string endpoint, string path,   Dictionary<string, SecuritySchemeType> securitySchemes, string apiKey)
         {
             Factory = factory;
-            Name = Utils.ToPascalCase(operation.Value.OperationId);
+            //Name = Utils.ToPascalCase(operation.Value.OperationId);
             FCategory = category;
-            FSummary = operation.Value.Description;
-            FOperation = operation;
+            //FSummary = operation.Value.Description;
+            //FOperation = operation;
             FPath = path;
             FEndpoint = endpoint;
             FSecuritySchemes = securitySchemes;
@@ -50,11 +48,11 @@ namespace VL.OpenAPI
                 string desc = "";
 
                 // Retrieve parameters from the OpenAPI dump and create input pins
-                foreach(var parameter in FOperation.Value.Parameters)
-                {
-                    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
-                    inputs.Add(new PinDescription(parameter.Name, type, dflt, desc));
-                }
+                //foreach(var parameter in FOperation.Value.Parameters)
+                //{
+                //    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
+                //    inputs.Add(new PinDescription(parameter.Name, type, dflt, desc));
+                //}
 
                 // Adds the trigger pin
                 inputs.Add(new PinDescription("Execute", typeof(bool), false, "Sends a query as long as enabled"));
@@ -74,7 +72,7 @@ namespace VL.OpenAPI
         {
             desc = parameter.Description;
 
-            if(parameter.Schema.Type == "string")
+            /*if(parameter.Schema.Type == "string")
             {
                 type = typeof(string);
                 dflt = "";
@@ -91,12 +89,12 @@ namespace VL.OpenAPI
                     type = typeof(IEnumerable<string>);
                     dflt = Enumerable.Repeat<string>("", 0).ToArray();
                 }
-            }
+            }*/
         }
         public string FEndpoint;
         public string FPath;
-        public KeyValuePair<OperationType, OpenApiOperation> FOperation;
-        public IDictionary<string, OpenApiSecurityScheme> FSecuritySchemes;
+        //public KeyValuePair<OperationType, OpenApiOperation> FOperation;
+        public IDictionary<string, SecuritySchemeType> FSecuritySchemes;
         public string FAPIKey;
         public IVLNodeDescriptionFactory Factory { get; }
         public string Name { get; }

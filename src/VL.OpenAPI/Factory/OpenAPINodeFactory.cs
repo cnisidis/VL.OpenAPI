@@ -1,11 +1,9 @@
-﻿using Microsoft.OpenApi.Readers;
+﻿using Microsoft.OpenApi;
 using System.Collections.Immutable;
 using VL.Core;
 using RestSharp;
 using System.Reactive.Linq;
-using System;
-using System.Threading;
-using System.IO;
+
 using System.Text.RegularExpressions;
 
 namespace VL.OpenAPI
@@ -23,13 +21,13 @@ namespace VL.OpenAPI
         private static readonly Regex sWhitespace = new Regex(@"\s+");
 
         // The node factory cache will invalidate in case a cached factory or one of its nodes invalidates
-        private readonly NodeFactoryCache factoryCache = new NodeFactoryCache();
+        private readonly NodeFactoryCache factoryCache;
 
         public OpenAPINodeFactory(string directory = default, string directoryToWatch = default)
         {
             Directory = directory;
             DirectoryToWatch = directoryToWatch;
-
+            
             var builder = ImmutableArray.CreateBuilder<IVLNodeDescription>();
 
             if(directory != null)
@@ -64,13 +62,13 @@ namespace VL.OpenAPI
                     // var response = client.GetAsync(new RestRequest(), new CancellationToken()).GetAwaiter().GetResult().Content;
                     var response = client.Get(new RestRequest()).Content;
                     
-                    OpenApiDiagnostic diagnostic = new OpenApiDiagnostic();
-
+                    //Microsoft.OpenApi.MicrosoftExtensi diagnostic = new OpenApiDiagnostic();
+                    
                     // Parse schema
-                    var openApiDocument = new OpenApiStringReader().Read(response, out diagnostic);
+                    var openApiDocument = new Microsoft.OpenApi.OpenApiDocument(); //.Read(response, out diagnostic);
 
                     // Look for the authentication section
-                    var securitySchemes = openApiDocument.Components.SecuritySchemes;
+                    Dictionary<string, SecuritySchemeType> securitySchemes = openApiDocument.Components.SecuritySchemes != null ? (Dictionary<string, SecuritySchemeType>)openApiDocument.Components.SecuritySchemes : new Dictionary<string, SecuritySchemeType>();
 
                     // Iterate over the paths
                     foreach (var path in openApiDocument.Paths)
@@ -78,7 +76,7 @@ namespace VL.OpenAPI
                         // path.Key is the actual path of the request
                         foreach (var operation in path.Value.Operations)
                         {
-                            builder.Add(new OpenAPINodeDescription(this, projectName, hostname, path.Key, operation, securitySchemes, apiKey));
+                            builder.Add(new NodeDescription(this, projectName, hostname, path.Key, securitySchemes, apiKey));
                         }
                     }
                 }

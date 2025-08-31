@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="C3yfFHyPFwRLTdj6blVye1" LanguageVersion="2025.7.0-0569-gd8eda191f6" Version="0.128">
+  <NugetDependency Id="QZmJF2DhnSiNilKFRL7L9v" Location="VL.CoreLib" Version="2025.7.0-0569-gd8eda191f6" />
+  <Patch Id="FYupVnv49yqNZoG82amZOS">
+    <Canvas Id="FOIxRfQV4NGNjAU2DnaZey" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="VNacSpsjTtSOgp56cLubwB">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="UowWMtw470dMR4sPfAJfv8">
+        <Canvas Id="ABuYfcLlBOYL1qyIYVR3iS" CanvasType="Group">
+          <Node Bounds="463,120,85,19" Id="I397K72GEWUNgN1lZ1SiK4">
+            <p:NodeReference LastCategoryFullName="IO.HTTP" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="HTTPGet" />
+            </p:NodeReference>
+            <Pin Id="IBn9IwbupUSPqqwHhTfAns" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="KRUw2N0gL1mMY9cNRzyOIQ" Name="URL" Kind="InputPin" />
+            <Pin Id="UwdEALosxsUMwRjj2SvQoZ" Name="Headers" Kind="InputPin" />
+            <Pin Id="QT1DkIE0bkCNh0FN4AaOxk" Name="Username" Kind="InputPin" />
+            <Pin Id="B8ZuzvXAF1GLqdNseF7wQ8" Name="Password" Kind="InputPin" />
+            <Pin Id="ViFuQEzCulBNvlH2kW5M6Q" Name="Refresh" Kind="InputPin" />
+            <Pin Id="QBibyMPttGbLkJWY87j7u5" Name="Result" Kind="OutputPin" />
+            <Pin Id="SF2wFd047qMLUA4sX0PrMq" Name="In Progress" Kind="OutputPin" />
+          </Node>
+          <Pad Id="RtWYa4YXIgcNQRtH5AMOw6" Comment="File Path" Bounds="150,-79,213,17" ShowValueBox="true" isIOBox="true" Value="apis\swagger.yaml">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="-5,27,594,430" Id="Mcy63WIoK1MOLPRGhVUhYt">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+            </p:NodeReference>
+            <Pin Id="DAQ8o9bri97LIZcNlOAFlJ" Name="Force" Kind="InputPin" />
+            <Pin Id="PkWn0cUdRj0PlGIJ20QUWC" Name="Dispose Cached Outputs" Kind="InputPin" />
+            <Pin Id="QBFFtk6RkBkPgbLjlVHW6J" Name="Has Changed" Kind="OutputPin" />
+            <Patch Id="Mfxdu6vDp1uNkBjyR3pxQn" ManuallySortedPins="true">
+              <Patch Id="GL6bbbcEKTDMM0DRxbXCgE" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="NQzxZjkcOeQOCNluihQ7bK" Name="Then" ManuallySortedPins="true" />
+              <Node Bounds="359,120,81,19" Id="G9vlQGUasSGPvn1vzgCoAK">
+                <p:NodeReference LastCategoryFullName="Primitive.String" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="IsNullOrEmpty" />
+                </p:NodeReference>
+                <Pin Id="DO5S6YcG4WCO2P3ThPtqeG" Name="Input" Kind="StateInputPin" />
+                <Pin Id="N2pXc4fJWHQMpNTvAq1vmi" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="359,151,37,19" Id="B06mzjJL1HjPh7CAQ18y0t">
+                <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="NOT" />
+                </p:NodeReference>
+                <Pin Id="P0dD15SFLvcNvWSY2nITiz" Name="Input" Kind="StateInputPin" />
+                <Pin Id="IiUogCCaCuMNzNUigk2lg3" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="279,290,71,26" Id="KvCu2I3YCIhPM14TRskbgZ">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.ReadResult" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="ReadResult" />
+                  <Choice Kind="OperationCallFlag" Name="Deconstruct" />
+                </p:NodeReference>
+                <Pin Id="GeG7BuEjPgeLpLzZ4JYkCj" Name="Input" Kind="StateInputPin" />
+                <Pin Id="GNenwva59YMNrtjXWMq27V" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="BdvDleuRWGdN0OA3BSv4ik" Name="Document" Kind="OutputPin" />
+                <Pin Id="NYVZHCBEShOQTsxGDISEeX" Name="Diagnostic" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="138,170,70,26" Id="I4CnFn31jZFO5848X4ms0m">
+                <p:NodeReference LastCategoryFullName="System.IO.MemoryStream" LastDependency="System.IO.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="MemoryStream" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                  <PinReference Kind="InputPin" Name="Buffer" />
+                </p:NodeReference>
+                <Pin Id="KmnlWby8QdhPiwOVwzmexX" Name="Buffer" Kind="InputPin" />
+                <Pin Id="SEPq44IpsWSOTHAGnQKvr8" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="138,90,63,19" Id="PgUUyTVqYLkN0qC4q1GDXV">
+                <p:NodeReference LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="FileReader" />
+                </p:NodeReference>
+                <Pin Id="KmA9ZEUWls4LSjpYifDOMp" Name="Node Context" Kind="InputPin" IsHidden="true" />
+                <Pin Id="TiKzDXf7QzwNloN4AJGEYt" Name="File Path" Kind="InputPin" />
+                <Pin Id="TM0XAkkuipEQRpBYQhsSfg" Name="Read" Kind="InputPin" />
+                <Pin Id="NOe35bf9D5HLbQFUej61jM" Name="Output" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="138,130,83,26" Id="R4CxrVNjY38NBvnd2ra4S6">
+                <p:NodeReference LastCategoryFullName="Collections.Mutable.MutableArray" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="ArrayType" Name="MutableArray" NeedsToBeDirectParent="true" />
+                  <Choice Kind="OperationCallFlag" Name="FromSequence" />
+                </p:NodeReference>
+                <Pin Id="I2IJ5hAaocRMMtj2vMUcmI" Name="Input" Kind="StateInputPin" />
+                <Pin Id="Sl2nUmsxeYGQFg9C98pjQc" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="477,160,100,26" Id="MqhU72RJeALMmOzgc7IL6s">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiReaderSettings" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiReaderSettings" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="QGh3jjZCqudQC8EhX0n5qL" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="345,330,85,26" Id="GrlpDVQjhykLu1rm4nRfFB">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiDiagnostic" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDiagnostic" />
+                  <Choice Kind="OperationCallFlag" Name="Format" />
+                </p:NodeReference>
+                <Pin Id="OT2tT6agCv7Mu1nLko2Dul" Name="Input" Kind="StateInputPin" />
+                <Pin Id="MtN5h87nAjQMVRd2VgXQgO" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="MonUvrpU1ZSLo5Ccg3yy5a" Name="Format" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="345,370,85,26" Id="QiH7LHr21IjNjUbi48aKnG">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiDiagnostic" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDiagnostic" />
+                  <Choice Kind="OperationCallFlag" Name="Errors" />
+                </p:NodeReference>
+                <Pin Id="A5bhiyc8XFYMVZLDelhP8c" Name="Input" Kind="StateInputPin" />
+                <Pin Id="OMCFa8ao6WsMVk20oK94F9" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="D0p9TlBg2sSPHhfewPc0Zx" Name="Errors" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="279,181,154,26" Id="Iiwk0eMeEZbLvVteApbH6b">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.Reader.OpenApiReaderSettings" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiReaderSettings" />
+                  <Choice Kind="OperationCallFlag" Name="AddMicrosoftExtensionParsers" />
+                </p:NodeReference>
+                <Pin Id="NDuqnh4L60GL23l7pdd04H" Name="Input" Kind="StateInputPin" />
+                <Pin Id="RmVKk52ct2hOKVICUZzalM" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="87,240,89,26" Id="LCrfonfoXbQMka4QpxUhIA">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.YamlReader.OpenApiYamlReader" LastDependency="Microsoft.OpenApi.YamlReader.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="YamlReader" />
+                  <Choice Kind="OperationCallFlag" Name="Read" />
+                  <PinReference Kind="InputPin" Name="Input (this)" />
+                  <PinReference Kind="InputPin" Name="Input" />
+                </p:NodeReference>
+                <Pin Id="ESonMxEB1YRP0EVW8C1Jkd" Name="Input (this)" Kind="StateInputPin" />
+                <Pin Id="I0VWkM0H35bOlg1OAe2KFX" Name="Input" Kind="InputPin" />
+                <Pin Id="K9OnCid3fYnLLRAMp41E2A" Name="Location" Kind="InputPin" />
+                <Pin Id="J3cLysjXW9zMwjq0QxcQ5V" Name="Settings" Kind="InputPin" />
+                <Pin Id="ADfNL9mrUy4M5PikZLkdXo" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="U22TzvlDSWUPuUybi3OYmZ" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="463,241,89,26" Id="DFf6h1Y7vuiO7lm5iLDc1z">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.YamlReader.OpenApiYamlReader" LastDependency="Microsoft.OpenApi.YamlReader.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <FullNameCategoryReference ID="Microsoft.OpenApi.YamlReader.OpenApiYamlReader" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                </p:NodeReference>
+                <Pin Id="U9RiWpQ64LmQFfukBgFVrR" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="245,50,55,19" Id="GLchvz4TRufLv8UOFg9Pz1">
+                <p:NodeReference LastCategoryFullName="System.Conversion" LastDependency="VL.CoreLib.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="ToString" />
+                </p:NodeReference>
+                <Pin Id="LKkeQaiBlYHMP5AJySVcAH" Name="Input" Kind="InputPin" />
+                <Pin Id="OfjyCnwoV4ENnGdvUgYzlF" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="255,111,46,26" Id="TPfB4BT9mc8PO7q9pipgST">
+                <p:NodeReference LastCategoryFullName="System.Uri" LastDependency="System.dll" OverloadStrategy="AllPinsThatAreNotCommon">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="Uri" />
+                  <Choice Kind="OperationCallFlag" Name="Create" />
+                  <PinReference Kind="InputPin" Name="Uri String" />
+                </p:NodeReference>
+                <Pin Id="TeSJcZ1XMyAOfr5OcB5Kbs" Name="Uri String" Kind="InputPin" />
+                <Pin Id="EG5ZeSDQeqxM8eQtonF91F" Name="Output" Kind="StateOutputPin" />
+              </Node>
+              <Node Bounds="132,350,84,26" Id="PxKewWBpk0bOwkz5FpryP3">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" />
+                  <Choice Kind="OperationCallFlag" Name="Paths" />
+                </p:NodeReference>
+                <Pin Id="Igz4BCQ4F5jOSAkL6fVyhq" Name="Input" Kind="StateInputPin" />
+                <Pin Id="I2v5LwSI96uOyDz9ksnQgL" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="QHle2MKuYPTMAW1o5jNdwA" Name="Paths" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="7,350,84,26" Id="SXi57kjo60cPGksLW0Txks">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiDocument" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiDocument" />
+                  <Choice Kind="OperationCallFlag" Name="Info" />
+                </p:NodeReference>
+                <Pin Id="Eid9yutA1F0Nr3m5Q6Ox0r" Name="Input" Kind="StateInputPin" />
+                <Pin Id="LEnjAuIbwdeMto0vbovRyb" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="RerIp0jq3cBMuAQm4XNpDE" Name="Info" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="63,411,68,26" Id="PSzWjTtgIMNP6jBvdug4K6">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiInfo" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiInfo" />
+                  <Choice Kind="OperationCallFlag" Name="Description" />
+                </p:NodeReference>
+                <Pin Id="DxwAWVJ3KabN2gxU8k1ox7" Name="Input" Kind="StateInputPin" />
+                <Pin Id="NKyLXy97QdHOyeWwu4OAKc" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="OOY0sgzH0e9QZSwy6Ljfmv" Name="Description" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="GDeHFD6MwckLmZXBtqaJHu" Bounds="490,451" Alignment="Bottom" />
+            <ControlPoint Id="G6tKx0tHgrEODyEku36a2q" Bounds="417,451" Alignment="Bottom" />
+            <ControlPoint Id="UMg0MjpSLKXNuuWXQbXrzi" Bounds="295,451" Alignment="Bottom" />
+            <ControlPoint Id="IADot1XNmYxNw15CMoc9zO" Bounds="119,451" Alignment="Bottom" />
+          </Node>
+          <Pad Id="KD7DPmLXhqnPRK25fQXLot" Comment="Force" Bounds="12,-59,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EE2ChPIFpYfNHDKqJ4iogK" Comment="" Bounds="650,430,127,15" ShowValueBox="true" isIOBox="true" />
+          <Node Bounds="474,448,93,86" Id="Nu19YRa1MsbLnicsnJy21k">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+            </p:NodeReference>
+            <Pin Id="RqsnhzccBAALgnPxMzagoW" Name="Break" Kind="OutputPin" />
+            <Patch Id="RUbEw4D5lJbNz6FIQx4eRe" ManuallySortedPins="true">
+              <Patch Id="L2yydgOM38kOr7woTxMVOz" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="IWFH7FyF1gdNRjivxhXv7O" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="BDl9bUzl4TGLgnTc49URKR" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="488,471,65,26" Id="VuebFn0C5BVQMCx1u99oRF">
+                <p:NodeReference LastCategoryFullName="Microsoft.OpenApi.OpenApiError" LastDependency="Microsoft.OpenApi.dll">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <CategoryReference Kind="AssemblyCategory" Name="OpenApiError" />
+                  <Choice Kind="OperationCallFlag" Name="Message" />
+                </p:NodeReference>
+                <Pin Id="Q6YtRrDNYHOPisPZ3csqcq" Name="Input" Kind="StateInputPin" />
+                <Pin Id="VmvS3lG5gtjMyaIJFsn9U0" Name="Output" Kind="StateOutputPin" />
+                <Pin Id="C0gY59B0vnOO4hOfRvWpnN" Name="Message" Kind="OutputPin" />
+              </Node>
+            </Patch>
+            <ControlPoint Id="NmF3LilT8O5NVtj5M3R6Yd" Bounds="490,454" Alignment="Top" />
+            <ControlPoint Id="AJNKFXRKW00L2x3aYUt0Bt" Bounds="550,528" Alignment="Bottom" />
+          </Node>
+          <Pad Id="NQm0Tm5ZRJNLxz8yZWrID7" Comment="" Bounds="550,570,733,45" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item>Please provide the correct format, 'o' is an invalid start of a value. LineNumber: 0 | BytePositionInLine: 0.</Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="Dh4pmxSpqHvO4q5FnN6YlN" Comment="" Bounds="200,470,190,132" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DeeVO6RcoLONaWxazuPkhL" Comment="" Bounds="101,500,370,113" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="P9e5r0uc5jqO1Ro7vD5YXP" Name="Create" />
+        <Patch Id="U02yrayFSzmOU2Tj8aUnft" Name="Update" />
+        <ProcessDefinition Id="VACv74K5vOLPIXfdlWIGLZ">
+          <Fragment Id="VIKHCxLSOIjMvmp85wKBTq" Patch="P9e5r0uc5jqO1Ro7vD5YXP" Enabled="true" />
+          <Fragment Id="M9kr1zaZQsmNEpN2PhwWsb" Patch="U02yrayFSzmOU2Tj8aUnft" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="TOwhJJbxiYoPYSyWyWjJLj" Ids="N2pXc4fJWHQMpNTvAq1vmi,P0dD15SFLvcNvWSY2nITiz" />
+        <Link Id="Vek4xjyut1tPQy5e7aa9H3" Ids="KD7DPmLXhqnPRK25fQXLot,DAQ8o9bri97LIZcNlOAFlJ" />
+        <Link Id="AZyii7ZQMMHLIU9zjWQlKR" Ids="Sl2nUmsxeYGQFg9C98pjQc,KmnlWby8QdhPiwOVwzmexX" />
+        <Link Id="BehCTj25b1QNpoVOzpxNv4" Ids="RtWYa4YXIgcNQRtH5AMOw6,TiKzDXf7QzwNloN4AJGEYt" />
+        <Link Id="TN0ba7HrUyoPRBxjV2Lswl" Ids="NOe35bf9D5HLbQFUej61jM,I2IJ5hAaocRMMtj2vMUcmI" />
+        <Link Id="G85PYQLmHVUOcnXT0Qa0OA" Ids="KD7DPmLXhqnPRK25fQXLot,TM0XAkkuipEQRpBYQhsSfg" />
+        <Link Id="JHA52hKEKPcN4W5YPRejYB" Ids="NYVZHCBEShOQTsxGDISEeX,OT2tT6agCv7Mu1nLko2Dul" />
+        <Link Id="VEBzCFu6evAOOxCCfNk7Oc" Ids="MonUvrpU1ZSLo5Ccg3yy5a,GDeHFD6MwckLmZXBtqaJHu" />
+        <Link Id="UXTbXOYY5daMnIH9A2GBCc" Ids="GDeHFD6MwckLmZXBtqaJHu,EE2ChPIFpYfNHDKqJ4iogK" />
+        <Link Id="TPpG2hTJ6M1M1UHqKQK3pE" Ids="MtN5h87nAjQMVRd2VgXQgO,A5bhiyc8XFYMVZLDelhP8c" />
+        <Link Id="JsN8oi8sf8fOZqkOAU4FEs" Ids="D0p9TlBg2sSPHhfewPc0Zx,G6tKx0tHgrEODyEku36a2q" />
+        <Link Id="JQTzF4Uhrr1MWm7W1Y3hQe" Ids="G6tKx0tHgrEODyEku36a2q,NmF3LilT8O5NVtj5M3R6Yd" />
+        <Link Id="PqYrqJHoUHyQQdKEoX0GJ3" Ids="NmF3LilT8O5NVtj5M3R6Yd,Q6YtRrDNYHOPisPZ3csqcq" />
+        <Link Id="J3UMoOQ1KCLLiIOWyCw0Jw" Ids="C0gY59B0vnOO4hOfRvWpnN,AJNKFXRKW00L2x3aYUt0Bt" />
+        <Link Id="CLWg6Is34xAN3gyzNNvNoq" Ids="AJNKFXRKW00L2x3aYUt0Bt,NQm0Tm5ZRJNLxz8yZWrID7" />
+        <Link Id="VQtYsqtWY1vOju8MwEIAgS" Ids="QGh3jjZCqudQC8EhX0n5qL,NDuqnh4L60GL23l7pdd04H" />
+        <Link Id="QOh4aEs3KheP9A4GU1iDr9" Ids="U9RiWpQ64LmQFfukBgFVrR,ESonMxEB1YRP0EVW8C1Jkd" />
+        <Link Id="HzpI266yCkxLHC9nRLOg2v" Ids="SEPq44IpsWSOTHAGnQKvr8,I0VWkM0H35bOlg1OAe2KFX" />
+        <Link Id="Llp0OBZmAOhNdfP8ZPApSg" Ids="QGh3jjZCqudQC8EhX0n5qL,J3cLysjXW9zMwjq0QxcQ5V" />
+        <Link Id="JessVOTawPLPE2iEuZSdi4" Ids="U22TzvlDSWUPuUybi3OYmZ,GeG7BuEjPgeLpLzZ4JYkCj" />
+        <Link Id="OH4EvqNT9jgNVcKVktIJOP" Ids="RtWYa4YXIgcNQRtH5AMOw6,LKkeQaiBlYHMP5AJySVcAH" />
+        <Link Id="S6St0cTTF0AOZJKBC9c0po" Ids="OfjyCnwoV4ENnGdvUgYzlF,TeSJcZ1XMyAOfr5OcB5Kbs" />
+        <Link Id="QLj3Y0j6w6XLr2NwDhM467" Ids="EG5ZeSDQeqxM8eQtonF91F,K9OnCid3fYnLLRAMp41E2A" />
+        <Link Id="EzoZcd9hDSzMG1yyskP5Iy" Ids="BdvDleuRWGdN0OA3BSv4ik,Igz4BCQ4F5jOSAkL6fVyhq" />
+        <Link Id="FRGTSOpvILpPGmAmgkhb2y" Ids="QHle2MKuYPTMAW1o5jNdwA,UMg0MjpSLKXNuuWXQbXrzi" />
+        <Link Id="SkDSgNeLnHOMYQyjVDS0Cu" Ids="UMg0MjpSLKXNuuWXQbXrzi,Dh4pmxSpqHvO4q5FnN6YlN" />
+        <Link Id="DYX8WRzEB5AOORMiUxr9Gb" Ids="BdvDleuRWGdN0OA3BSv4ik,Eid9yutA1F0Nr3m5Q6Ox0r" />
+        <Link Id="CY0ZMCqeKqCQDeUQEDCA2e" Ids="RerIp0jq3cBMuAQm4XNpDE,DxwAWVJ3KabN2gxU8k1ox7" />
+        <Link Id="IDD4dbvvlR4OPfIrE5dmcx" Ids="OOY0sgzH0e9QZSwy6Ljfmv,IADot1XNmYxNw15CMoc9zO" />
+        <Link Id="UP5pdvYqn0LOdrzeYxuBl8" Ids="IADot1XNmYxNw15CMoc9zO,DeeVO6RcoLONaWxazuPkhL" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="IGyQd4EorN0NpojVUPnKMd" Location="VL.OpenAPI" Version="0.0.0" />
+  <NugetDependency Id="GkAIKCNikC3Oaj6Vo8yWOE" Location="Microsoft.OpenApi" Version="2.3.0" />
+  <PlatformDependency Id="A1Lvcp1Zp8sLfpd8HFgw9t" Location="System.IO" />
+  <PlatformDependency Id="FN6tRCoBi4xPwqATVOi08j" Location="System" />
+  <NugetDependency Id="QGZOERzyodfNMUdwkXDmur" Location="Microsoft.OpenApi.YamlReader" Version="2.3.0" />
+</Document>
