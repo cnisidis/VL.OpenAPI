@@ -13,39 +13,31 @@ namespace VL.OpenAPI
         bool FInitialized;
         bool FError;
 
-        string FSummary;
+        string? FSummary;
         string FCategory;
 
-        private string authParameterName;
-        private HttpMethod FMethod;
+        private string authParameterName = "";
+        private HttpMethod FMethod = new HttpMethod("GET");
         // Inputs and outputs
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
 
-        public NodeDescription(IVLNodeDescriptionFactory factory, string category, string endpoint, string path,   Dictionary<string, SecuritySchemeType> securitySchemes=null, string apiKey=null)
-        {
-            Factory = factory;
-            //Name = Utils.ToPascalCase(operation.Value.OperationId);
-            FCategory = category;
-            //FSummary = operation.Value.Description;
-            //FOperation = operation;
-            FPath = path;
-            FEndpoint = endpoint;
-            FSecuritySchemes = securitySchemes;
-            FAPIKey = apiKey;
-        }
-
-        public NodeDescription(IVLNodeDescriptionFactory factory, string category, OpenApiOperation operation, HttpMethod method) 
+        private OpenApiOperation FOperation = new OpenApiOperation();
+        private KeyValuePair<string, IOpenApiPathItem> FItemPath;
+        public NodeDescription(IVLNodeDescriptionFactory factory, string category, OpenApiOperation operation, KeyValuePair<string,IOpenApiPathItem> itemPath, HttpMethod method) 
         {
             Factory = factory;
             Name = Utils.ToPascalCase(operation.OperationId);
-            FSummary = operation.Summary;
+            FSummary = this.FOperation.Description;
             FEndpoint = "";
             FAPIKey = "";
             FMethod = method;
-            FCategory = category + method.Method.ToString();
-            
-
+            FCategory = category +"."+ method.Method.ToString();
+            this.FOperation = operation;
+            this.FItemPath = itemPath;
+            inputs = new();
+            outputs = new();
+            FInitialized = false;
         }
 
         void Init()
@@ -67,13 +59,28 @@ namespace VL.OpenAPI
                 //    inputs.Add(new PinDescription(parameter.Name, type, dflt, desc));
                 //}
 
-                // Adds the trigger pin
-                inputs.Add(new PinDescription("Execute", typeof(bool), false, "Sends a query as long as enabled"));
 
-                // For now let's just get the raw JSON response from Directus. Create a single string output pin
-                outputs.Add(new PinDescription("Result", typeof(string),"", "The raw string response"));
+                if (FOperation != null && FItemPath.Value.Parameters != null)
+                {
+                    
+                    foreach (var parameter in FItemPath.Value.Parameters)
+                    {
+                        if (parameter != null)
+                        {
+                            inputs.Add(new PinDescription(Utils.ToPascalCase(parameter.Name), type, dflt, parameter.Description));
+                        }
 
-                FInitialized = true;
+                    }
+                }
+
+
+                    // Adds the trigger pin
+                    //inputs.Add(new PinDescription("Execute", typeof(bool), false, "Sends a query as long as enabled"));
+
+            // For now let's just get the raw JSON response from Directus. Create a single string output pin
+            //outputs.Add(new PinDescription("Result", typeof(string),"", "The raw string response"));
+
+                    FInitialized = true;
             }
             catch (Exception ex)
             {
@@ -104,15 +111,18 @@ namespace VL.OpenAPI
                 }
             }*/
         }
+        public IVLNodeDescriptionFactory Factory { get; }
+        public bool Fragmented => false;
+
         public string FEndpoint;
         public string FPath;
         //public KeyValuePair<OperationType, OpenApiOperation> FOperation;
         public IDictionary<string, SecuritySchemeType> FSecuritySchemes;
         public string FAPIKey;
-        public IVLNodeDescriptionFactory Factory { get; }
+        
         public string Name { get; }
         public string Category => FCategory;
-        public bool Fragmented => false;
+        
         public IReadOnlyList<IVLPinDescription> Inputs
         {
             get
