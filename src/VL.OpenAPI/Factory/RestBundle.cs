@@ -117,7 +117,7 @@ namespace VL.OpenAPI
             Method parsed = Method.Get;
             Enum.TryParse<Method>(m, out parsed);
 
-            Console.WriteLine($"Parsing method : {method} --> {m} --> {parsed}");
+            //Console.WriteLine($"Parsing method : {method} --> {m} --> {parsed}");
 
             return parsed;
             
