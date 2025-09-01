@@ -1,10 +1,12 @@
-﻿using System;
-using System.Linq;
-using VL.Core;
-using RestSharp;
+﻿using CommunityToolkit.HighPerformance;
 using Microsoft.OpenApi;
-using System.Collections.Generic;
+using RestSharp;
+using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using VL.Core;
 
 namespace VL.OpenAPI
 {
@@ -18,9 +20,9 @@ namespace VL.OpenAPI
         VL.OpenAPI.RestBundle bundle;
 
         private string authParameterName;
-
+        private Dictionary<string, object> parameters;
         // This is where we'll run the queries to the Directus instance
-
+        
         public OpenAPINode(NodeDescription description, NodeContext nodeContext) : base(nodeContext)
         {
             this.description = description;
@@ -32,12 +34,21 @@ namespace VL.OpenAPI
             resultPin = Outputs.FirstOrDefault(o => o.Name == "Result");
             runPin = Inputs.LastOrDefault();
 
+            parameters = new Dictionary<string, object>();
+
+            foreach(var p in description.Parameters)
+            {
+                if (p != null)
+                    parameters.TryAdd(p.Name, null);
+            }
             // Create RestClient & RestRequest
             //client = new RestClient(description.FEndpoint + description.FPath);
-            Method method = new Method();
+           //Method method = new Method();
             //bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
-            bundle = new RestBundle();
-            bundle.SetRequest(new RestRequest("", method));
+            bundle = new RestBundle(this.description.FItemPath.Key, description.FOperation.Key.ToString());
+           
+            
+            //bundle.GetRequest().Parameters.AddParameter(description.Inputs.Select(x=>x.Name));
             //response = new RestResponse();
             // Look for authentication stuff
            /* try
@@ -66,8 +77,7 @@ namespace VL.OpenAPI
                 this.bundle.Execute = false;
                 return;
             }
-                
-
+            
             this.bundle.Execute = true;
             // Clear all params except auth!
             // Is it better to do that or just create a new request?
@@ -82,11 +92,12 @@ namespace VL.OpenAPI
                 // That looks a bit convoluted
                 if (input.Type == typeof(IEnumerable<string>) && ((int)typeof(ICollection).GetProperty("Count").GetValue(input.Value, null)) > 0)
                 {
-                    bundle.GetRequest().AddOrUpdateParameter(input.OriginalName, string.Join(",", (IEnumerable<string>)input.Value));
+                    bundle.UpdateParameter(input.OriginalName, string.Join(",", (IEnumerable<string>)input.Value));
                 }
                 else if(input.Type == typeof(string) && !(string.IsNullOrEmpty(input.Value as string)))
                 {
-                    bundle.GetRequest().AddOrUpdateParameter(input.OriginalName, (string)input.Value);
+                    bundle.UpdateParameter(input.OriginalName, (string)input.Value);
+                    Console.WriteLine($"Update {input.Name}  --> {input.OriginalName}" );
                 }
                 else if(input.Type == typeof(bool))
                 {

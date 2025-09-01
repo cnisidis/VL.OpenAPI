@@ -23,24 +23,33 @@ namespace VL.OpenAPI
         List<PinDescription> inputs = new List<PinDescription>();
         List<PinDescription> outputs = new List<PinDescription>();
 
-        private OpenApiOperation FOperation = new OpenApiOperation();
-        private KeyValuePair<string, IOpenApiPathItem> FItemPath;
+        public KeyValuePair<HttpMethod, OpenApiOperation> FOperation;
+        public KeyValuePair<string, IOpenApiPathItem> FItemPath;
 
-
-        public NodeDescription(IVLNodeDescriptionFactory factory, string category, OpenApiOperation operation, KeyValuePair<string,IOpenApiPathItem> itemPath, HttpMethod method) 
+        public List<IOpenApiParameter> Parameters;
+        
+        public NodeDescription(IVLNodeDescriptionFactory factory, string category, KeyValuePair<HttpMethod, OpenApiOperation> operation, KeyValuePair<string,IOpenApiPathItem> itemPath) 
         {
             Factory = factory;
-            Name = Utils.ToPascalCase(operation.OperationId);
-            FSummary = this.FOperation.Description;
+            
+            FOperation = operation;
+            FItemPath = itemPath;
+
+            Name = Utils.ToPascalCase(operation.Value.OperationId);
+            
+            FSummary = operation.Value.Description ?? "";
             FEndpoint = "";
             FAPIKey = "";
-            FMethod = method;
-            FCategory = category +"."+ method.Method.ToString();
-            this.FOperation = operation;
-            this.FItemPath = itemPath;
+            FMethod = operation.Key;
+            FCategory = category +"."+ operation.Key.ToString();
+            
+            
             inputs = new();
             outputs = new();
             FInitialized = false;
+            Parameters = new();
+            
+            
         }
 
         void Init()
@@ -56,19 +65,19 @@ namespace VL.OpenAPI
                 string desc = "";
 
                 var pathItemParameters = FItemPath.Value.Parameters ?? new List<IOpenApiParameter>();
-                var operationParameters = FOperation.Parameters ?? new List<IOpenApiParameter>();
-                
-                var allParameters = pathItemParameters.Union(operationParameters);
+                var operationParameters = FOperation.Value.Parameters ?? new List<IOpenApiParameter>();
+
+                Parameters = pathItemParameters.Union(operationParameters).ToList();
                 // Retrieve parameters from the OpenAPI dump and create input pins
-                if (FOperation != null && allParameters.Count() > 0)
+                if (FOperation.Value != null && Parameters.Count() > 0)
                 {
                     
-                    foreach (var parameter in allParameters)
+                    foreach (var parameter in Parameters)
                     {
                         if (parameter != null)
                         {
                             //    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
-                            inputs.Add(new PinDescription(Utils.ToPascalCase(parameter.Name), type, dflt, parameter.Description));
+                            inputs.Add(new PinDescription(parameter.Name, type, dflt, parameter.Description));
                         }
 
                     }
