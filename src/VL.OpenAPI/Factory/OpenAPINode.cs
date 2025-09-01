@@ -5,6 +5,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Management;
 using System.Runtime.CompilerServices;
 using VL.Core;
 
@@ -43,8 +44,7 @@ namespace VL.OpenAPI
             }
             // Create RestClient & RestRequest
             //client = new RestClient(description.FEndpoint + description.FPath);
-           //Method method = new Method();
-            //bool meth = Enum.TryParse<Method>(description.FOperation.Key.ToString(), out method);
+           
             bundle = new RestBundle(this.description.FItemPath.Key, description.FOperation.Key.ToString());
            
             
@@ -75,16 +75,19 @@ namespace VL.OpenAPI
             if (runPin is null || !(bool)runPin.Value)
             {
                 this.bundle.Execute = false;
+                // Clear all params except auth!
+                // Is it better to do that or just create a new request?
+                foreach (var param in bundle.GetRequest().Parameters.Where(x => x.Name != authParameterName))
+                {
+                    bundle.GetRequest().Parameters.RemoveParameter(param);
+                }
+                
                 return;
             }
             
             this.bundle.Execute = true;
-            // Clear all params except auth!
-            // Is it better to do that or just create a new request?
-            foreach(var param in bundle.GetRequest().Parameters.Where(x => x.Name != authParameterName))
-            {
-                //request.Parameters.Remove(param);
-            }
+            
+            
 
             // Look for pins that actually have a value and add them as params
             foreach(var input in Inputs.Cast<Pin>().SkipLast(1))
@@ -94,14 +97,25 @@ namespace VL.OpenAPI
                 {
                     bundle.UpdateParameter(input.OriginalName, string.Join(",", (IEnumerable<string>)input.Value));
                 }
-                else if(input.Type == typeof(string) && !(string.IsNullOrEmpty(input.Value as string)))
+                else if (input.Type == typeof(int))
                 {
-                    bundle.UpdateParameter(input.OriginalName, (string)input.Value);
-                    Console.WriteLine($"Update {input.Name}  --> {input.OriginalName}" );
+                    Console.WriteLine($"Update {input.Name}  --> {input.OriginalName}");
+                    bundle.UpdateParameter(input.OriginalName, input.Value.ToString());
                 }
-                else if(input.Type == typeof(bool))
+                else if (input.Type == typeof(string) && !(string.IsNullOrEmpty(input.Value as string)))
+                {
+                    Console.WriteLine($"Update {input.Name}  --> {input.OriginalName}");
+                    bundle.UpdateParameter(input.OriginalName, (string)input.Value);
+
+                }
+                else if (input.Type == typeof(bool))
                 {
                     // TBD
+                }
+                else
+                {
+                    Console.WriteLine($"Update {input.Name}  --> {input.OriginalName}");
+                    bundle.UpdateParameter(input.OriginalName, (string)input.Value);
                 }
             }
 
