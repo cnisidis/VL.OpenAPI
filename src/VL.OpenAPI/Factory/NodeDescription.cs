@@ -76,7 +76,7 @@ namespace VL.OpenAPI
                     {
                         if (parameter != null)
                         {
-                            //    GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
+                            GetTypeDefaultAndDescription(parameter, ref type, ref dflt, ref desc);
                             inputs.Add(new PinDescription(parameter.Name, type, dflt, parameter.Description));
                         }
 
@@ -100,28 +100,45 @@ namespace VL.OpenAPI
             }
         }
 
-        void GetTypeDefaultAndDescription(OpenApiParameter parameter, ref Type type, ref object dflt, ref string desc)
+        void GetTypeDefaultAndDescription(IOpenApiParameter parameter, ref Type type, ref object dflt, ref string desc)
         {
-            desc = parameter.Description;
-
-            /*if(parameter.Schema.Type == "string")
+            if(parameter != null)
             {
-                type = typeof(string);
-                dflt = "";
-            }
-            else if(parameter.Schema.Type == "boolean")
-            {
-                type = typeof(bool);
-                dflt = false;
-            }
-            else if(parameter.Schema.Type == "array")
-            {
-                if(parameter.Schema.Items.Type == "string")
+                string strType = parameter.Schema?.Type.ToString().ToLower();
+                if (strType == "string")
                 {
-                    type = typeof(IEnumerable<string>);
-                    dflt = Enumerable.Repeat<string>("", 0).ToArray();
+                    type = typeof(string);
+                    dflt = "";
                 }
-            }*/
+                else if(strType == "integer")
+                {
+                    type = typeof(int);
+                    dflt = 0;
+                }
+                else if (strType == "boolean")
+                {
+                    type = typeof(bool);
+                    dflt = false;
+                }
+                else
+                {
+                    type = typeof(object);
+                    dflt = null;
+                }
+                /*
+                else if (strType == "array")
+                {
+                    if (parameter.Schema.Items.Type == "string")
+                    {
+                        type = typeof(IEnumerable<string>);
+                        dflt = Enumerable.Repeat<string>("", 0).ToArray();
+                    }
+                }
+                */
+            }
+            desc = parameter.Description;
+            //parameter.Schema.OneOf
+            
         }
         public IVLNodeDescriptionFactory Factory { get; }
         public bool Fragmented => false;
