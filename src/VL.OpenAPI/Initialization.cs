@@ -4,6 +4,8 @@ using System;
 using System.Collections.Immutable;
 using System.IO;
 using System.Reactive.Linq;
+using System.Reflection.Metadata;
+using System.Xml.Linq;
 using VL.Core;
 using VL.Core.CompilerServices;
 
@@ -57,21 +59,40 @@ namespace VL.OpenAPI
                                     {
                                         Console.WriteLine(err.Message);
                                     }
+                                    break;
                                 }
-                                
-                                foreach (var path in Parser.openApiDoc.Paths)
+                                else
                                 {
-                                    
-                                    foreach (var operation in path.Value.Operations)
+                                    //This may cause issues
+                                    //if (Parser.openApiDoc.Components?.Schemas != null)
+                                    //{
+                                        
+                                    //    foreach (var schema in Parser.openApiDoc.Components.Schemas)
+                                    //    {
+                                            
+                                    //        var schemaName = schema.Key;
+                                    //        var schemaObject = schema.Value;
+
+                                    //        Console.WriteLine($"- Schema name: '{schemaName}'");
+                                    //        Console.WriteLine($"  Type: '{schemaObject.Type}'");
+                                    //        Console.WriteLine($"  Properties found: {schemaObject.Properties.Count}");
+                                    //    }
+                                    //}
+                                        foreach (var path in Parser.openApiDoc.Paths)
                                     {
-                                        if (operation.Key != null && operation.Value != null)
+
+                                        foreach (var operation in path.Value.Operations)
                                         {
-                                            
-                                            builder.Add(new NodeDescription(nodeFactory, Utils.ToPascalCase(fname) + "." + ext.ToUpper(), operation.Value, path, operation.Key));
+                                            if (operation.Key != null && operation.Value != null)
+                                            {
+
+                                                builder.Add(new NodeDescription(nodeFactory, Utils.ToPascalCase(fname) + "." + ext.ToUpper(), operation, path));
+                                            }
+
                                         }
-                                            
                                     }
                                 }
+                                    
                             }
                                 
                             
