@@ -93,7 +93,7 @@ namespace VL.OpenAPI
             Method = this.request.Method;
         }
 
-        public static RestRequest BuildReques(HttpMethod httpMethod)
+        public static RestRequest BuildRequest(HttpMethod httpMethod)
         {
             var method = (Method)Enum.Parse(typeof(Method), httpMethod.ToString(), true);
             var request = new RestSharp.RestRequest();
