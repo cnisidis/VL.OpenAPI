@@ -3,7 +3,7 @@ using System;
 
 namespace VL.OpenAPI
 {
-    public class Pin : IVLPin
+    sealed class Pin : IVLPin
     {
         public object Value { get; set; }
         public Type Type { get; set; }

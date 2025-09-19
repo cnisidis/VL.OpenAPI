@@ -6,7 +6,7 @@ _Automagically create nodes from an OpenAPI description._
 
 This plugin reads an OpenAPI description and generates nodes implementing all queries it contains.
 
-The test setup uses a Directus instance for convenience, but don't hesitate to test it against whatever you have at hand.
+<!-- The test setup uses a Directus instance for convenience, but don't hesitate to test it against whatever you have at hand. -->
 
 
 
@@ -44,9 +44,9 @@ If you test this plugin with something else than Directus or with a more complex
 
 - Start vvvv and install the following dependencies
   
-  - `Microsoft.OpenApi 1.2.3`
+  - `Microsoft.OpenApi 2.3.0`
   
-  - `Microsoft.OpenApi.Readers 1.2.3`
+  - <s>`Microsoft.OpenApi.Readers 1.2.3`</s> [DEPRECATED]
   
   - `RestSharp 108.0.1`
 
@@ -57,6 +57,18 @@ If you test this plugin with something else than Directus or with a more complex
 The test Directus instance is bundled with this repo. Make sure it's started and either start vvvv via the VS solution or open vvvv with the `--package-repositories` arg and look for OpenAPI in the help browser.
 
 The help patch contains nothing special, but it already has the required config file next to it.
+
+### Automatic Node Generation
+
+Next to your patch, create an `openAPI` folder. In that folder, you will store/save the yaml or json schema you want to exploit. 
+
+The main `Category` of the new made nodes will inherit its name by the filename, so be sure you renamed it properly so you can find it easier in your Node Browser. 
+
+
+A good practice is generally to rename the schemas you want to use, for instance, in directus example, after you obtain the `api.json` it is suggested ti follow a renaming patter like `Directus.json`. In case you want to mention other chracterisitics, like the source or the version just use Pascal Casing like 
+`DirectusV3.1`
+
+
 
 #### By hand
 
