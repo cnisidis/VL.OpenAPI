@@ -77,9 +77,11 @@ namespace VL.OpenAPI
                 this.bundle.Execute = false;
                 // Clear all params except auth!
                 // Is it better to do that or just create a new request?
+                
                 foreach (var param in bundle.GetRequest().Parameters.Where(x => x.Name != authParameterName))
                 {
                     bundle.GetRequest().Parameters.RemoveParameter(param);
+                    if (!bundle.GetRequest().Parameters.Any() || bundle.GetRequest().Parameters == null) return;
                 }
                 
                 return;
