@@ -78,6 +78,10 @@ namespace VL.OpenAPI
             return response;
         }
 
+        public string GetResponseAsString()
+        {
+            return response.Content;
+        }
 
         public void Split(out Method Method, out string Template, out Spread<KeyValuePair<string, object>> Parameters, out string Response, out bool HasSegments, out bool Execute)
         {
