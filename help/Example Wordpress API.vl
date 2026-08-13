@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" xmlns:r="reflection" Id="KBkTH5DygpWNNMuQkdvJOi" LanguageVersion="2025.7.0" Version="0.128">
+  <NugetDependency Id="UknrqolL0CKME01oiBNmYQ" Location="VL.CoreLib" Version="2025.7.0" />
+  <Patch Id="CFRnXVNoExoNL0TGaPWUQ5">
+    <Canvas Id="TsAJtm07m22NCs85ntF6D9" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="FeluEYAHwoMOmqfO2oO9j5">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <CategoryReference Kind="Category" Name="Primitive" />
+      </p:NodeReference>
+      <Patch Id="RIdoKrj56YONog5hvPI8Jr">
+        <Canvas Id="GA1jmXdaovkPTTcVifCZGU" CanvasType="Group">
+          <Node Bounds="78,470,65,19" Id="C3kHD2nncM6L4zEdYY4AIk">
+            <p:NodeReference LastCategoryFullName="VL.OpenAPI.Rest" LastDependency="VL.OpenAPI.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="Client" />
+            </p:NodeReference>
+            <Pin Id="TIFGmBOfaOyLa3nm7yvwBy" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="PYeQv3DTB9ILUWPbLOQoq9" Name="Api Token" Kind="InputPin" />
+            <Pin Id="OAVBwjPhjbiP8ICtIEmkMx" Name="Base Uri" Kind="InputPin" />
+            <Pin Id="R1pQnB8S3v3NGobMMuk52d" Name="Requests" Kind="InputPin" />
+            <Pin Id="HeC0HNkjnilMSTpgAbLNay" Name="Client" Kind="OutputPin" />
+            <Pin Id="VAHVDZMjj9zPuVujIIr5Mg" Name="Requests 2" Kind="InputPin" />
+          </Node>
+          <Pad Id="EyyvOVrHAvSMn4LStAJtO4" Comment="Base Uri" Bounds="100,91,393,44" ShowValueBox="true" isIOBox="true" Value="http://192.168.1.11:8080/api/v1/">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="118,219,67,19" Id="GjpN9OXjJHTLX5QOVPdFCJ">
+            <p:NodeReference LastCategoryFullName="Resolume.YAML.GET" LastDependency="VL.OpenAPI-Factory (C:\vvvv\Repos\VL.OpenAPI\help)">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Resolume" />
+              <CategoryReference Kind="Category" Name="YAML" />
+              <CategoryReference Kind="Category" Name="GET" />
+              <Choice Kind="ProcessNode" Name="GetColumn" />
+            </p:NodeReference>
+            <Pin Id="MeenS5ewTXnOZ8DgvJsEFI" Name="Columnindex" Kind="InputPin" DefaultValue="1" />
+            <Pin Id="Vc0autUFnHCMR9BZCVow1W" Name="Execute" Kind="InputPin" />
+            <Pin Id="RkPB5SQACHTOydlLOqR4ZC" Name="Result" Kind="OutputPin" />
+          </Node>
+          <Pad Id="PvuZ7GSgjZTQKfjK1teK0O" Comment="Execute" Bounds="246,180,35,35" ShowValueBox="true" isIOBox="true" Value="false">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="118,260,75,26" Id="TrJHGc1gcxjQGNVMUOLsBj">
+            <p:NodeReference LastCategoryFullName="VL.OpenAPI.Rest.Bundle" LastDependency="VL.OpenAPI.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Bundle" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="GetResponse" />
+            </p:NodeReference>
+            <Pin Id="UcYSEloIU7TMp3jM7fGiWQ" Name="Bundle" Kind="InputPin" />
+            <Pin Id="SNOTH3lE9seLLxdCCKmW5F" Name="Bundle" Kind="OutputPin" />
+            <Pin Id="CAS8uSvMHmgPpfDQhp19uG" Name="Response" Kind="OutputPin" />
+          </Node>
+          <Pad Id="SbNbwaYKl67NlaaBKEfA70" Comment="Columnindex" Bounds="120,179,35,15" ShowValueBox="true" isIOBox="true" Value="1">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Integer32" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SptovcIZzKRP6XOvrNAEDD" Comment="Response" Bounds="190,340,246,122" ShowValueBox="true" isIOBox="true" />
+        </Canvas>
+        <Patch Id="IeOH0EfVFH9NAr1fmiLoyp" Name="Create" />
+        <Patch Id="Obcpr8HlLMpMIwmj8mjc9h" Name="Update" />
+        <ProcessDefinition Id="Nu0lfGztEDvO0b8lvs4MOr">
+          <Fragment Id="VkEht07HxHSNDDvMSysxqu" Patch="IeOH0EfVFH9NAr1fmiLoyp" Enabled="true" />
+          <Fragment Id="L9trwTwIr0pLUEeLbTXtdH" Patch="Obcpr8HlLMpMIwmj8mjc9h" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="I0da4tXf7rTLpcSxm1A5ZD" Ids="EyyvOVrHAvSMn4LStAJtO4,OAVBwjPhjbiP8ICtIEmkMx" />
+        <Link Id="NQnfAhpI2sULIB89foCDzV" Ids="PvuZ7GSgjZTQKfjK1teK0O,Vc0autUFnHCMR9BZCVow1W" />
+        <Link Id="NjcDmY52NycLKAxqwIuet3" Ids="RkPB5SQACHTOydlLOqR4ZC,UcYSEloIU7TMp3jM7fGiWQ" />
+        <Link Id="MtY2kYMcGiMNDTTC1hMdsD" Ids="SbNbwaYKl67NlaaBKEfA70,MeenS5ewTXnOZ8DgvJsEFI" />
+        <Link Id="E1dMVVW18IMNYf5KQjujKt" Ids="SNOTH3lE9seLLxdCCKmW5F,R1pQnB8S3v3NGobMMuk52d" />
+        <Link Id="CuA1gtVxZmGNhPfFxU8O89" Ids="CAS8uSvMHmgPpfDQhp19uG,SptovcIZzKRP6XOvrNAEDD" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="UQkQdcmdfvrNBtZ3D0QQ6g" Location="VL.OpenAPI" Version="0.0.0" />
+</Document>
